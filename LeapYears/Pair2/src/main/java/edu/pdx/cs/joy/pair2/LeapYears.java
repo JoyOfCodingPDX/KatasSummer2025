@@ -1,4 +1,4 @@
-package edu.pdx.cs.joy.pair1;
+package edu.pdx.cs.joy.pair2;
 
 import com.google.common.annotations.VisibleForTesting;
 
