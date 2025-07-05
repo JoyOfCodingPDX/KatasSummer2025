@@ -11,8 +11,8 @@
   <name>LeapYears Katas</name>
   <description>The Leap Years Katas</description>
   <modules>
-    <!--
     <module>Pair1</module>
+    <!--
     <module>Pair2</module>
     <module>Pair3</module>
     <module>Pair4</module>
