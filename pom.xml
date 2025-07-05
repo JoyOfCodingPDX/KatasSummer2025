@@ -11,15 +11,16 @@ accordingly
     <groupId>io.github.davidwhitlock.joy</groupId>
     <version>1.2.2</version>
   </parent>
-  <groupId>edu.pdx.cs.joy.YourUserId</groupId>
-  <artifactId>JoyOfCoding</artifactId>
+  <groupId>edu.pdx.cs.joy.katas</groupId>
+  <artifactId>KatasSummer2025</artifactId>
   <version>1.0.0</version>
   <packaging>pom</packaging>
-  <name>JoyOfCodingSummer2025</name>
-  <description>Source code written in the Summer 2025 offering of The Joy of Coding</description>
-  <url>http://YourGitHubUserInLowerCase.github.io/JoyOfCodingSummer2025</url>
+  <name>KatasWinter2025</name>
+  <description>Code Katas done in the Summer 2025 offering of The Joy of Coding</description>
+  <url>https://github.com/JoyOfCodingPDX/KatasSummer2025</url>
   <modules>
     <module>FizzBuzz</module>
+    <module>LeapYears</module>
   </modules>
   <inceptionYear>2025</inceptionYear>
   <organization>
@@ -28,7 +29,7 @@ accordingly
   </organization>
   <issueManagement>
     <system>github</system>
-    <url>https://github.com/YourGitHubUser/JoyOfCodingSummer2025/issues</url>
+    <url>https://github.com/JoyOfCodingPDX/KatasSummer2025/issues</url>
   </issueManagement>
   <licenses>
     <license>
