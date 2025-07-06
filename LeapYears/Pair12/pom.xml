@@ -37,7 +37,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.pair10.LeapYears</mainClass>
+              <mainClass>edu.pdx.cs.joy.pair12.LeapYears</mainClass>
             </manifest>
           </archive>
         </configuration>
