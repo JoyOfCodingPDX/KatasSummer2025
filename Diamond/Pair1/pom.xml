@@ -2,22 +2,31 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <artifactId>joy</artifactId>
-    <groupId>io.github.davidwhitlock.joy</groupId>
-    <version>1.2.2</version>
+    <groupId>edu.pdx.cs.joy.katas</groupId>
+    <artifactId>DiamondKatas</artifactId>
+    <version>1.0.0</version>
   </parent>
   <groupId>edu.pdx.cs.joy.pair1</groupId>
-  <artifactId>Pair1</artifactId>
+  <artifactId>Diamond</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>Kata Project</name>
-  <description>A simple project for getting started with code Pair1s</description>
+  <name>Diamond Pair 1</name>
+  <description>Diamond Kata</description>
   <url>http://www.cs.pdx.edu</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
+  <developers>
+    <developer>
+      <name>Student 1</name>
+    </developer>
+    <developer>
+      <name>Student 2</name>
+    </developer>
+  </developers>
 
   <build>
     <plugins>
@@ -28,7 +37,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.pair1.Kata</mainClass>
+              <mainClass>edu.pdx.cs.joy.pair1.Diamond</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -64,25 +73,25 @@
     </plugins>
   </build>
 
-    <reporting>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-report-plugin</artifactId>
-          <version>${maven-surefire-report-plugin.version}</version>
-        </plugin>
-         <plugin>
-           <groupId>org.apache.maven.plugins</groupId>
-           <artifactId>maven-checkstyle-plugin</artifactId>
-           <version>${maven-checkstyle-plugin.version}</version>
-         </plugin>
-        <plugin>
-          <groupId>org.jacoco</groupId>
-          <artifactId>jacoco-maven-plugin</artifactId>
-          <version>${jacoco-maven-plugin.version}</version>
-        </plugin>
-      </plugins>
-    </reporting>
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>${maven-surefire-report-plugin.version}</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>${maven-checkstyle-plugin.version}</version>
+      </plugin>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>${jacoco-maven-plugin.version}</version>
+      </plugin>
+    </plugins>
+  </reporting>
 
   <dependencies>
     <dependency>
