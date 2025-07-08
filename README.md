@@ -1,4 +1,4 @@
-[![Java CI with Maven](https://github.com/YourGitHubId/JoyOfCodingSummer2025/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/JoyOfCodingSummer2025/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/JoyOfCodingPDX/KatasSummer2025/actions/workflows/maven.yml/badge.svg)](https://github.com/JoyOfCodingPDX/KatasSummer2025/actions/workflows/maven.yml)
 
 # Getting Started with The Joy of Coding with Java and Android
 
