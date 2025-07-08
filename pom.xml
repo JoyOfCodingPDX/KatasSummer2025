@@ -50,6 +50,18 @@ accordingly
       </roles>
       <timezone>-7</timezone>
     </developer>
+    <developer>
+      <id>burich</id>
+      <name>Sam Burich</name>
+      <email>burich@pdx.edu</email>
+      <url>https://github.com/burichpdx</url>
+      <organization>PSU Department of Computer Science</organization>
+      <organizationUrl>http://www.cs.pdx.edu</organizationUrl>
+      <roles>
+        <role>Driver</role>
+      </roles>
+      <timezone>-7</timezone>
+    </developer>
   </developers>
   <repositories>
     <repository>
