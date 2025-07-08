@@ -15,7 +15,12 @@ public class FizzBuzz {
     System.err.println("Missing command line arguments");
   }
 
-  public String getFizzBuzzValue(int number) {
-    return String.valueOf(number);
+  public static String getFizzBuzzValue(int number) {
+    if (number % 3 == 0) {
+      return "Fizz";
+
+    } else {
+      return String.valueOf(number);
+    }
   }
 }
