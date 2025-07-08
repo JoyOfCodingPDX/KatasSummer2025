@@ -12,7 +12,10 @@ public class FizzBuzz {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    // System.err.println("Missing command line arguments");
+    for(int i = 1; i <= 100; i++) {
+      System.out.println(getFizzBuzzValue(i));
+    }
   }
 
   public static String getFizzBuzzValue(int number) {
