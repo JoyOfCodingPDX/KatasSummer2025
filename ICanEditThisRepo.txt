@@ -2,12 +2,12 @@ Replace your initials in this file with the word "HERE" to demonstrate that you 
 
  1. HA
  2. SA
- 3. JB
- 4. SB
+ 3. HERE
+ 4. HERE
  5. MD
  6. DG
  7. TG
- 8. HK
+ 8. HERE
  9. LK
 10. MK
 11. TK
@@ -15,12 +15,12 @@ Replace your initials in this file with the word "HERE" to demonstrate that you 
 13. RL
 14. AM
 15. IM
-16. MaMa
+16. HERE
 17. MiMa
 18. JPa
 19. JPu
 20. DR
-21. NS
+21. HERE
 22. SS
 23. CT
 24. GT
@@ -28,3 +28,4 @@ Replace your initials in this file with the word "HERE" to demonstrate that you 
 26. MT
 27. ST
 28. KW
+
