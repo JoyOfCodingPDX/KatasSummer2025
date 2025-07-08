@@ -14,7 +14,7 @@ Replace your initials in this file with the word "HERE" to demonstrate that you 
 12. ML
 13. RL
 14. HERE
-15. IM
+15. HERE
 16. HERE
 17. MiMa
 18. JPa
@@ -23,7 +23,7 @@ Replace your initials in this file with the word "HERE" to demonstrate that you 
 21. HERE
 22. HERE
 23. CT
-24. GT
+24. HERE
 25. KT
 26. MT
 27. ST
