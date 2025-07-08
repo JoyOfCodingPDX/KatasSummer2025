@@ -11,7 +11,7 @@ class FizzBuzzIT extends InvokeMainTestCase {
   @Test
   void invokingMainWithNoArgumentsPrintsMissingArgumentsToStandardError() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(FizzBuzz.class);
-    String expectedOut = "1\r\n2\r\nFizz\r\n4\r\nBuzz";
+    String expectedOut = String.join(System.lineSeparator(), "1", "2", "Fizz", "4", "Buzz");
     assertThat(result.getTextWrittenToStandardOut(), containsString(expectedOut));
   }
 
