@@ -27,6 +27,5 @@ Replace your initials in this file with the word "HERE" to demonstrate that you 
 25. KT
 26. MT
 27. ST
-28. KW
-29. KW
+28. HERE
 
