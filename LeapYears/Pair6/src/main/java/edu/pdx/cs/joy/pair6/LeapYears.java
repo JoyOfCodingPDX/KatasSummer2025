@@ -19,7 +19,15 @@ public class LeapYears {
 
   public static boolean isLeapYear(int year) {
     int leapyeartest = year % 4;
-    if (leapyeartest == 0){ return true; }
+
+    int leapyeartest1 = year % 100;
+    if (leapyeartest == 0){
+      return true; }
+
+    if (leapyeartest1 == 100){
+
+      return false;
+    }
     else { return false; }
   }
 
