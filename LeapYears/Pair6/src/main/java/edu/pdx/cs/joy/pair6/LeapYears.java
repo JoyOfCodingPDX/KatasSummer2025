@@ -20,12 +20,16 @@ public class LeapYears {
   public static boolean isLeapYear(int year) {
     int leapyeartest = year % 4;
 
-    int leapyeartest1 = year % 100;
+    int leapyeartest100 = year % 100;
 
     int leapyeartest400 = year % 400;
 
-    if (leapyeartest1 % 100 == 0 && leapyeartest400 % 400 != 0) {
+    if (leapyeartest100 % 100 == 0 && leapyeartest400 % 400 != 0) {
       return false;
+    }
+
+    if (leapyeartest == 0 && leapyeartest100 != 0){
+      return true;
     }
 
 
@@ -36,7 +40,7 @@ public class LeapYears {
       return true;
     }
 
-    if (leapyeartest1 == 100) {
+    if (leapyeartest100 == 100) {
 
       return false;
     } else {
