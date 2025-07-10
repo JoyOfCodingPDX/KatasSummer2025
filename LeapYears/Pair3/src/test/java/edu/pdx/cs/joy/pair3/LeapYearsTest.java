@@ -19,9 +19,15 @@ public class LeapYearsTest
   }
 
   @Test
-  void anyYearDivBy4IsLeapYear() {
-    boolean ly = LeapYears.isLeapYear(2016);
+  void anyYearDivBy100butnot400IsLeapYear() {
+    boolean ly = LeapYears.isLeapYear(2100);
+    assertTrue(!ly);
+  }
+  @Test
+  void anyYearDivBy400IsLeapYear() {
+    boolean ly = LeapYears.isLeapYear(2000);
     assertTrue(ly);
   }
+
 
 }
