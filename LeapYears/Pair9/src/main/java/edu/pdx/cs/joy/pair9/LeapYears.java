@@ -15,3 +15,16 @@ public class LeapYears {
     System.err.println("Missing command line arguments");
   }
 }
+
+public static string getLeapYearValue(int year) {
+    if (year < 0) {
+      throw new IllegalArgumentException("Year must be greater than 0");
+    }
+
+    if (year % 4 == 0 && year % 100 != 0) {
+      return "Leap Year";
+    } else {
+      return "Not a Leap Year";
+    }
+  }
+}
