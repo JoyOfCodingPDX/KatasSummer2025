@@ -15,16 +15,20 @@ public class LeapYears {
     System.err.println("Missing command line arguments");
   }
 
-    public String isLeapYear(int i) {
+    public static String isLeapYear(int i) {
+      String s = "";
         if (i < 0) {
-            throw new IllegalArgumentException("Year cannot be negative");
+            s = "Year cannot be negative";
+            return s;
         }
+
         if (i % 4 == 0 && (i % 100 != 0 || i % 400 == 0)) {
             return "is a leap year";
         } else {
             return "is not a leap year";
         }
     }
+    /*
     public String isNotLeapYear(int i){
       if (i <0){
                 throw new IllegalArgumentException("Year has to be before BC");
@@ -39,7 +43,11 @@ public class LeapYears {
                 return "is not a leap year";
             }
 
-      }
+      }*/
+    public static void Display(String[] args){
+                System.out.println(isLeapYear(100));
+
+    }
 
     }
 

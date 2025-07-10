@@ -21,10 +21,13 @@ public static string getLeapYearValue(int year) {
       throw new IllegalArgumentException("Year must be greater than 0");
     }
 
-    if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+    if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0) ) {
       return "Leap Year";
-    } else {
+    } else if((year % 100 == 0 && year % 400 != 0)) || (year % 4 != 0)) {
       return "Not a Leap Year";
+    }
+    } else {
+      return "Not a leap year";
     }
   }
 }
