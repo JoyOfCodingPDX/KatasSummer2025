@@ -16,15 +16,21 @@ public class LeapYears {
   }
 }
 
-public static string getLeapYearValue(int year) {
+public boolean string getLeapYearValue(int year) {
+    boolean isLeapYear = false;
     if (year < 0) {
       throw new IllegalArgumentException("Year must be greater than 0");
     }
 
     if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0) ) {
-      return "Leap Year";
+        isLeapYear = true;
+        //return "isLeapYear";
     } else if((year % 100 == 0 && year % 400 != 0)) || (year % 4 != 0)) {
-      return "Not a Leap Year";
+        isLeapYear = false;
+        //return false;
+    }
+    }
+      return isLeapYear;
     }
   }
 }

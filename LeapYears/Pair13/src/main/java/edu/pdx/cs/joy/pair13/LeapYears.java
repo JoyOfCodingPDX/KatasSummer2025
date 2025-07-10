@@ -14,10 +14,25 @@ public class LeapYears {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
-  public static boolean isLeapYear(int year) {
+  try {
+    int year = Integer.parseInt(args[0]);
+    if (isLeapYear(year)) {
+      System.out.println(year + " is a leap year.");
+    } else {
+      System.out.println(year + " is not a leap year.");
+    }
+  } catch (NumberFormatException e) {
+    System.err.println("Invalid year: " + args[0]);
+  }
+}
+
+    public static boolean isLeapYear(int year) {
     if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
       return true;
     }
   }
 
 }
+
+
+
