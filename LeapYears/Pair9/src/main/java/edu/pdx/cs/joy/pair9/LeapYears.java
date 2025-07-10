@@ -26,5 +26,8 @@ public static string getLeapYearValue(int year) {
     } else if((year % 100 == 0 && year % 400 != 0)) || (year % 4 != 0)) {
       return "Not a Leap Year";
     }
+    } else {
+      return "Not a leap year";
+    }
   }
 }
