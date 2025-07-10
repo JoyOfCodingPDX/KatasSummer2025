@@ -17,10 +17,29 @@ public class LeapYears {
   }
 
   @VisibleForTesting
-  public void main(String[] args) {
-    if (this.LeapYearsCLI(args) != 1) {
+  public static void main(String[] args) {
+
+    LeapYears app = new LeapYears();
+
+    if (app.LeapYearsCLI(args) != 1) {
       System.out.println("ERROR: Incorrect number of arguments");
       return;
     }
+    try{
+      int hold_year =  Integer.parseInt(args[0]);
+
+      if (hold_year % 4 == 0 && hold_year % 100 != 0 || hold_year % 400 == 0) {
+        System.out.println("Leap year is valid " + hold_year);
+      }
+      else {
+        System.out.println("Leap year is not valid " + hold_year);
+      }
+
+      System.out.println(hold_year);
+    }
+    catch(NumberFormatException e){
+      System.out.println("ERROR: Incorrect arguments type");
+    }
+    return;
   }
 }

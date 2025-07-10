@@ -16,6 +16,9 @@ public class LeapYears {
   }
 
   public static String isLeapYear(int i) {
-    return String.valueOf(i);
+    if (i % 400 == 0){
+      return String.format("%d is a Leap Year.", i);
+    }
+    return String.format("%d is not a Leap Year.", i);
   }
 }
