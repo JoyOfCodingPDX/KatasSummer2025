@@ -59,8 +59,11 @@ public class LeapYears {
             }
 
       }*/
-    public static void displayResult(int year, String result) {
-        System.out.println("Year " + year + " " + result);
+    public static String displayResult(int year, String result) {
+        String finalResult = "Year " + year + " " + result;
+
+        System.out.println(finalResult);
+        return finalResult;
     }
 
 
