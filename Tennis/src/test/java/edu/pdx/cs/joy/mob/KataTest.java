@@ -7,7 +7,7 @@ public class KataTest
 
   @Test
   void canInstantiateKataClass() {
-    new Kata();
+    new Tennis();
   }
 
 }
