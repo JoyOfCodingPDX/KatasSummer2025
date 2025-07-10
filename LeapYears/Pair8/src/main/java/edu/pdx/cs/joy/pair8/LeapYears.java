@@ -15,7 +15,7 @@ public class LeapYears {
     System.err.println("Missing command line arguments");
   }
 
-  public String isLeapYear(int i) {
+  public static String isLeapYear(int i) {
     if (i % 4 == 0) {
       return i + " is a leap year";
     }
