@@ -44,4 +44,19 @@ public class LeapYearsTest
     LeapYears leapyears5 = new LeapYears();
     assertThat(leapyears5.isLeapYear(2400), equalTo(true));
   }
+
+
+  @Test
+  void yearDivisibleBy400and100IsLeapYear() {
+    LeapYears leapyears6 = new LeapYears();
+    assertThat(leapyears6.isLeapYear(2000), equalTo(true));
+
+  }
+
+  @Test
+  void yearDivisibleBy4and100IsNotLeapYear() {
+    LeapYears leapyears7 = new LeapYears();
+    assertThat(leapyears7.isLeapYear(2008), equalTo(true));
+
+  }
 }
