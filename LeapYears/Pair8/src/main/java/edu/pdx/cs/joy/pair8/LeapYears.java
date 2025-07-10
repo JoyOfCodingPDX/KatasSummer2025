@@ -16,19 +16,22 @@ public class LeapYears {
     if (args.length > 0) {
       year = args[0];
     }
+    int yearInt = 0;
+
     if (year != null) {
       try {
-        int yearInt = Integer.parseInt(year);
-        System.out.println(isLeapYear(yearInt));
+        yearInt = Integer.parseInt(year);
       } catch (NumberFormatException e) {
         System.err.println("Invalid year format: " + year + "Enter a positive integer year");
       }
-      return;
     }
     if (args.length == 0) {
       System.err.println("Missing command line arguments");
       return;
     }
+
+    System.out.println(isLeapYear(yearInt));
+
     return;
   }
 
