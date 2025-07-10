@@ -19,7 +19,7 @@ public class LeapYearsTest
   void isItDivisibleBy400() {
     assertThat(LeapYears.isItLeap(2000), equalTo(true));
     assertThat(LeapYears.isItLeap(400), equalTo(true));
-    assertThat(LeapYears.isItLeap(0), equalTo(true));
+    assertThat(LeapYears.isItLeap(0), equalTo(false));
     assertThat(LeapYears.isItLeap(40000), equalTo(true));
     assertThat(LeapYears.isItLeap(-2000), equalTo(false));
     assertThat(LeapYears.isItLeap(1000), equalTo(false));
