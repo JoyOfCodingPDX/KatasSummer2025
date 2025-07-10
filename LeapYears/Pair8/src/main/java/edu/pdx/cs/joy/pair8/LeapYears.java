@@ -17,7 +17,7 @@ public class LeapYears {
 
   public String isLeapYear(int i) {
     if (i % 4 == 0) {
-      return i + " is a leap year";
+      return i + " is a leap year for sure";
     }
     return i + " is not a leap year";
   }
