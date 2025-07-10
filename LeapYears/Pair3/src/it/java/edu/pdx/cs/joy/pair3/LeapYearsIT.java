@@ -30,4 +30,15 @@ class LeapYearsIT extends InvokeMainTestCase {
     InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, "ase", "abc");
     assertThat(result.getTextWrittenToStandardError(), containsString("Invalid format!"));
   }
+
+  @Test
+  void invokingMainWithNegativeNumber(){
+    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, "-100", "-1");
+    assertThat(result.getTextWrittenToStandardError(), containsString("Cannot handle negative year!"));
+  }
+  @Test
+  void invokingMainWithEndYearSmallerthanStartYear(){
+    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, "2000", "1996");
+    assertThat(result.getTextWrittenToStandardError(), containsString("Start year must be less than End Year"));
+  }
 }
