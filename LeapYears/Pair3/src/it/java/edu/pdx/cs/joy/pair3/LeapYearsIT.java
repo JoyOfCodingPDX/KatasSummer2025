@@ -14,5 +14,16 @@ class LeapYearsIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 
+  @Test
+  void invokingMainWithOnlyOneArgument() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, "1998");
+    assertThat(result.getTextWrittenToStandardError(), containsString("Missing one command line argument"));
+  }
+
+  @Test
+  void invokingMainWithStartAndEndYear() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, "1998", "2005");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("2000 Leap!"));
+  }
 
 }

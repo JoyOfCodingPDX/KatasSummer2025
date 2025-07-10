@@ -24,6 +24,21 @@ public class LeapYears {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    if(args.length == 0) {
+      System.err.println("Missing command line arguments");
+    } else if(args.length == 1) {
+      System.err.println("Missing one command line argument");
+    }
+
+    int startYear = Integer.parseInt(args[0]);
+    int endYear = Integer.parseInt(args[1]);
+
+    for(int i = startYear; i <= endYear; i++) {
+      if(isLeapYear(i)) {
+        System.out.println(i + " Leap!");
+      } else {
+        System.out.println(i);
+      }
+    }
   }
 }
