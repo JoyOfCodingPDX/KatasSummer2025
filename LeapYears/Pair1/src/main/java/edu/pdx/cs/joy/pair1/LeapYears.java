@@ -8,10 +8,17 @@ import com.google.common.annotations.VisibleForTesting;
  * Use IntelliJ's "Refactor | Rename..." command to change the name of this
  * class (and its tests).
  */
-public class LeapYears {
+public class LeapYears
+{
 
   @VisibleForTesting
-  public static void main(String[] args) {
+  public static void main(String[] args)
+  {
     System.err.println("Missing command line arguments");
+    int x = Integer.parseInt(args[0]);
+    if((x % 400) == 0);
+    if((x % 4 == 0) && (x % 100 != 0)) {}
+
+
   }
 }
