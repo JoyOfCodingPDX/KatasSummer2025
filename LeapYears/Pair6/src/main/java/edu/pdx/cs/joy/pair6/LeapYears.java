@@ -11,11 +11,18 @@ import com.google.common.annotations.VisibleForTesting;
 public class LeapYears {
 
   @VisibleForTesting
-  public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+  public static boolean main(String[] args) {
+   return false ;
+    //System.err.println("Missing command line arguments");
   }
 
-  public Boolean isLeapYear(int year) {
-    return false;
+
+  public static boolean isLeapYear(int year) {
+    int leapyeartest = year % 4;
+    if (leapyeartest == 0){ return true; }
+    else { return false; }
   }
+
+
+
 }

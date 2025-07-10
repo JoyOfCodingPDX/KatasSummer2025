@@ -11,9 +11,16 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class LeapYears {
 
+  @VisibleForTesting
+  public int LeapYearsCLI(String [] args){
+    return args.length;
+  }
 
   @VisibleForTesting
-  public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+  public void main(String[] args) {
+    if (this.LeapYearsCLI(args) != 1) {
+      System.out.println("ERROR: Incorrect number of arguments");
+      return;
+    }
   }
 }
