@@ -16,8 +16,12 @@ public class LeapYearsTest
 
   @Test
   void divisibleByFourIsLeapYear() {
-
     assertThat(LeapYears.isLeapYear(2020), equalTo("2020 is a leap year"));
+  }
+
+  @Test
+  void divisibleByFourHundredIsLeapYear() {
+    assertThat(LeapYears.isLeapYear(2000), equalTo("2000 is a leap year"));
   }
 
 }
