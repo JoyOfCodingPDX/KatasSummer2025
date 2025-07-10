@@ -12,7 +12,7 @@ public class LeapYears {
 
   @VisibleForTesting
   public static boolean main(String[] args) {
-   return false ;
+    return false;
     //System.err.println("Missing command line arguments");
   }
 
@@ -24,19 +24,25 @@ public class LeapYears {
 
     int leapyeartest400 = year % 400;
 
-    if(leapyeartest400 == 0) {
-      return true;
-    }
-    if (leapyeartest == 0){
-      return true; }
-
-    if (leapyeartest1 == 100){
-
+    if (leapyeartest1 % 100 == 0 && leapyeartest400 % 400 != 0) {
       return false;
     }
-    else { return false; }
+
+
+    if (leapyeartest400 == 0) {
+      return true;
+    }
+    if (leapyeartest == 0) {
+      return true;
+    }
+
+    if (leapyeartest1 == 100) {
+
+      return false;
+    } else {
+      return false;
+    }
+
+
   }
-
-
-
 }

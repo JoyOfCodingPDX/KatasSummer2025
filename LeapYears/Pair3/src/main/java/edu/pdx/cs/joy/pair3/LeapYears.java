@@ -28,23 +28,27 @@ public class LeapYears {
       System.err.println("Missing command line arguments");
     } else if(args.length == 1) {
       System.err.println("Missing one command line argument");
-    }
-    try{
+    } else {
 
-    }
-    catch (NumberFormatException e){
+      int startYear;
+      int endYear;
 
-    }
-
-    int startYear = Integer.parseInt(args[0]);
-    int endYear = Integer.parseInt(args[1]);
-
-    for(int i = startYear; i <= endYear; i++) {
-      if(isLeapYear(i)) {
-        System.out.println(i + " Leap!");
-      } else {
-        System.out.println(i);
+      try {
+        startYear = Integer.parseInt(args[0]);
+        endYear = Integer.parseInt(args[1]);
+        for (int i = startYear; i <= endYear; i++) {
+          if (isLeapYear(i)) {
+            System.out.println(i + " Leap!");
+          } else {
+            System.out.println(i);
+          }
+        }
+      } catch (NumberFormatException e) {
+        System.err.println("Invalid format!");
       }
+
     }
+
+
   }
 }

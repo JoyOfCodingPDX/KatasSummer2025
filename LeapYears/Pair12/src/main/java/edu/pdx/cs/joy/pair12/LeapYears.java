@@ -16,13 +16,13 @@ public class LeapYears {
       System.err.println("Missing command line argument");
       return;
     }
-    //System.err.println("Missing command line arguments");
-    int value = Integer.parseInt(args[0]);
-    if (!check(value)) {
-      System.out.println(args[0] + " is not a leap year");
-    }
-    else {
-      System.out.println(args[0] + " is a leap year");
+    for (String i : args) {
+      int value = Integer.parseInt(i);
+      if (!check(value)) {
+        System.out.println(i + " is not a leap year");
+      } else {
+        System.out.println(i + " is a leap year");
+      }
     }
 
   }
