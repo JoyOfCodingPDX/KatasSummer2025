@@ -34,4 +34,13 @@ public class LeapYearsTest
     assertThat(LeapYears.check(1804), equalTo(true));
   }
 
+  @Test
+  void LeapYearNegative1000000000000000() {
+    assertThat(LeapYears.check(-1000000000), equalTo(true));
+  }
+  @Test
+  void LeapYearNegative1000000000000001() {
+    assertThat(LeapYears.check(-1000000001), equalTo(false));
+  }
+
 }
