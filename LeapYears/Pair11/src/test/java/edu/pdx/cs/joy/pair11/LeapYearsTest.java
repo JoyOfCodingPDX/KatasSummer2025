@@ -67,9 +67,9 @@ public class LeapYearsTest
   @Test
   void outputDisplayMessage() {
     assertThat(LeapYears.prettyMsg(2000), equalTo("2000 is a leap year"));
-    assertThat(LeapYears.prettyMsg(200), equalTo("200 is not a leap year"));
+    assertThat(LeapYears.prettyMsg(200), equalTo("In 200, Leap Years weren't discovered yet...\nIf it did, 200 is not a leap year"));
     assertThat(LeapYears.prettyMsg(-2000), equalTo("-2000 is not a leap year"));
-    assertThat(LeapYears.prettyMsg(0), equalTo("0 is not a leap year"));
+    assertThat(LeapYears.prettyMsg(0), equalTo("In 0, Leap Years weren't discovered yet...\nIf it did, 0 is not a leap year"));
 
   }
 
