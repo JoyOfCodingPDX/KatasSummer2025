@@ -15,9 +15,7 @@ public class LeapYearsTest
 
   @Test
   void canGetYearAndReturn(){
-    LeapYears leapYears = new LeapYears();
-    String result = leapYears.isLeapYear(2000);
-    assertThat(result, equalTo("2000"));
+    assertThat(LeapYears.isLeapYear(2000), equalTo("2000"));
   }
 }
 
