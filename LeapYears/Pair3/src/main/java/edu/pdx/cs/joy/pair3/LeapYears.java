@@ -29,6 +29,12 @@ public class LeapYears {
     } else if(args.length == 1) {
       System.err.println("Missing one command line argument");
     }
+    try{
+
+    }
+    catch (NumberFormatException e){
+
+    }
 
     int startYear = Integer.parseInt(args[0]);
     int endYear = Integer.parseInt(args[1]);
