@@ -38,7 +38,7 @@ public class LeapYears {
   public static String isLeapYear(int year) {
     if (year % 400 == 0) {
     if (year % 100 == 0) {
-            return year + "is not a  leap year";
+            return year + " is not a leap year";
         }
         return year + " is a leap year";
 

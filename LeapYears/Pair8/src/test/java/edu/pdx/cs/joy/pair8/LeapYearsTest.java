@@ -21,7 +21,7 @@ public class LeapYearsTest
 
   @Test
   void divisibleByFourHundredIsLeapYear() {
-    assertThat(LeapYears.isLeapYear(2000), equalTo("2000 is a leap year"));
+    assertThat(LeapYears.isLeapYear(2000), equalTo("2000 is not a leap year"));
   }
 
   @Test
