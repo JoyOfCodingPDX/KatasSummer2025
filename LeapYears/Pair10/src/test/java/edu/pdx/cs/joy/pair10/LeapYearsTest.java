@@ -28,4 +28,13 @@ public class LeapYearsTest
 
   }
 
+  @Test
+  void checkArgsExist(){
+    LeapYears newObject = new LeapYears();
+    String [] array = {"2"};
+    newObject.LeapYearsCLI(array);
+    assertEquals(1, newObject.LeapYearsCLI(array));
+
+  }
+
 }
