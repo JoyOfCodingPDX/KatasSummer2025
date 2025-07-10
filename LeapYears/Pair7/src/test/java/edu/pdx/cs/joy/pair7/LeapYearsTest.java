@@ -43,5 +43,13 @@ public class LeapYearsTest
     LeapYears leapYears = new LeapYears();
     assertThat(leapYears.isLeapYear(-1), equalTo("Year cannot be negative"));
   }
+
+  @Test
+  void Display()
+  {
+
+
+  }
+
 }
 
