@@ -29,6 +29,26 @@ public class LeapYearsTest
   // All that is divisible by 100, but by 400 is NOT LEAP year
   @Test
   void isItDivisibleBy100ButNot400() {
+    assertThat(LeapYears.isItLeap(1700), equalTo(false));
+    assertThat(LeapYears.isItLeap(1800), equalTo(false));
+    assertThat(LeapYears.isItLeap(1900), equalTo(false));
+    assertThat(LeapYears.isItLeap(2100), equalTo(false));
+
+    assertThat(LeapYears.isItLeap(2000), equalTo(true));
+    assertThat(LeapYears.isItLeap(-1700), equalTo(false));
+  }
+
+  @Test
+  void isItDivisibleBy4ButNot100() {
+
+    assertThat(LeapYears.isItLeap(16), equalTo(true));
+    assertThat(LeapYears.isItLeap(196), equalTo(true));
+    assertThat(LeapYears.isItLeap(225), equalTo(true));
+    assertThat(LeapYears.isItLeap(256), equalTo(true));
+    assertThat(LeapYears.isItLeap(100), equalTo(true));
+    assertThat(LeapYears.isItLeap(20), equalTo(true));
+    assertThat(LeapYears.isItLeap(-20), equalTo(true));
+    assertThat(LeapYears.isItLeap(0), equalTo(true));
 
   }
 
