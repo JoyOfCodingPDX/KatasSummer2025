@@ -58,4 +58,18 @@ class LeapYearsIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardOut(), containsString("3 is not a leap year"));
   }
 
+  @Test
+  void invokeMainWithOneBillionPrintsValue() {
+    String[] args = {"1000000000"};
+    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, args);
+    assertThat(result.getTextWrittenToStandardError(), containsString("Leap years should be less than 1000000000"));
+  }
+
+  @Test
+  void invokeMainWithDecimalPrintsError() {
+    String[] args = {"1099.2"};
+    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, args);
+    assertThat(result.getTextWrittenToStandardError(), containsString("Cannot parse a non-integer"));
+  }
+
 }

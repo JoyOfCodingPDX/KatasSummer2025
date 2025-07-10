@@ -23,6 +23,12 @@ public class LeapYearsTest
   void assert2000IsALeapYear(){
     assertThat(LeapYears.isLeapYear(2000), equalTo("2000 is a Leap Year."));
   }
+
+  @Test
+  void assert1700isNotALeapYear(){
+    assertThat(LeapYears.isLeapYear(1700), equalTo("1700 is not a Leap Year."));
+  }
+
 }
 
 

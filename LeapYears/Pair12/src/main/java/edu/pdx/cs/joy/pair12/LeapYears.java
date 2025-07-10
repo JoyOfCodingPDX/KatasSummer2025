@@ -17,7 +17,19 @@ public class LeapYears {
       return;
     }
     for (String i : args) {
-      int value = Integer.parseInt(i);
+      int value;
+
+      try {
+        value = Integer.parseInt(i);
+      } catch (NumberFormatException e) {
+        System.err.println("Cannot parse a non-integer");
+        continue;
+      }
+
+      if (value >= 1000000000) {
+        System.err.println("Leap years should be less than 1000000000");
+        continue;
+      }
       if (!check(value)) {
         System.out.println(i + " is not a leap year");
       } else {
@@ -37,6 +49,7 @@ public class LeapYears {
     if (num % 4 == 0) {
       return true;
     }
+
     return false;
   }
 }
