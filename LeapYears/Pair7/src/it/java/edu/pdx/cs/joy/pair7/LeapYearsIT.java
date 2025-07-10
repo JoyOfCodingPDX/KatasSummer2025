@@ -8,10 +8,11 @@ import static org.hamcrest.core.StringContains.containsString;
 
 class LeapYearsIT extends InvokeMainTestCase {
 
-  @Test
-  void invokingMainWithNoArgumentsPrintsMissingArgumentsToStandardError() {
-    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class);
-    assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
-  }
+    @Test
+    void invokingMainWithValidYearPrintsLeapYearResult() {
+        InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, "2016");
+        String expectedOut = "Year 2016 is a leap year";
+        assertThat(result.getTextWrittenToStandardOut(), containsString(expectedOut));
+    }
 
 }
