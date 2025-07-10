@@ -10,4 +10,18 @@ public class LeapYearsTest
     new LeapYears();
   }
 
+  @Test
+  void print2000leapYearValue() {
+    assertThat(LeapYears.getLeapYearValue(2000), equalTo(true));
+  }
+
+  @Test
+  void print2001leapYearValue() {
+    assertThat(LeapYears.getLeapYearValue(2001), equalTo(false));
+  }
+
+  @Test
+  void print2000leapYearValue() {
+    assertThat(LeapYears.getLeapYearValue(2000), equalTo(true));
 }
+
