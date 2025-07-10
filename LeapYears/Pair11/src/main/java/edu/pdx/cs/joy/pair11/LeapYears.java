@@ -16,7 +16,7 @@ public class LeapYears {
   }
 
   public static boolean isItLeap(double year) {
-    if(year < 0) {
+    if(year <= 0) {
       return false;
     }
     // Divisible by 400; yes, leap year
@@ -27,6 +27,13 @@ public class LeapYears {
       return false;
     }
 
+    else if (year % 4 == 0 && year % 100 != 0) {
+      return true;
+    }
+
+    else if (year % 4 != 0) {
+      return false;
+    }
 
     return false;
   }
