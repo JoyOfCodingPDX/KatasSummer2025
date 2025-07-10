@@ -16,6 +16,6 @@ public class LeapYears {
   }
 
   public String isLeapYear(int i) {
-    return null;
+    return String.valueOf(i);
   }
 }

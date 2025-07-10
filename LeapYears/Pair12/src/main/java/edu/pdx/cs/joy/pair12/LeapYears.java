@@ -12,9 +12,13 @@ public class LeapYears {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.out.println("This is a leap year");
+    if (args.length == 0) {
+      System.err.println("Missing command line argument");
+      return;
+    }
+    System.out.println(args[0] + "is a leap year");
     //System.err.println("Missing command line arguments");
-    int value = args[1];
+    int value = Integer.parseInt(args[0]);
 
   }
 
