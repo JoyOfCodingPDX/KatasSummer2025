@@ -16,9 +16,12 @@ public class LeapYears {
   }
 
     public String isLeapYear(int i) {
+      String s = "";
         if (i < 0) {
-            throw new IllegalArgumentException("Year cannot be negative");
+            s = "Year cannot be negative";
+            return s;
         }
+
         if (i % 4 == 0 && (i % 100 != 0 || i % 400 == 0)) {
             return "is a leap year";
         } else {

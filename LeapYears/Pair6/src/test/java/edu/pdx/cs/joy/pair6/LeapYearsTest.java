@@ -19,4 +19,17 @@ public class LeapYearsTest
     assertThat(leapyear1.isLeapYear(1582), equalTo(false));
   }
 
+
+
+  @Test
+  void yearNotDivisibleBy4IsNotLeapYear() {
+    LeapYears LeapYears2 = new LeapYears();
+    assertThat(LeapYears2.isLeapYear(2017), equalTo(false));
+  }
+
+  @Test
+  void yearDivisibleBy4isLeapYear() {
+    LeapYears leapyears3 = new LeapYears();
+    assertThat(leapyears3.isLeapYear(2016), equalTo(true));
+  }
 }

@@ -22,10 +22,24 @@ class LeapYearsIT extends InvokeMainTestCase {
   }
 
   @Test
-  void invokeMainWithValuePrintsValue() {
+  void invokingMainWith100PrintsFalse() {
+    String[] args = {"100"};
+    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, args);
+    assertThat(result.getTextWrittenToStandardOut(), containsString("is not a leap year"));
+  }
+
+  @Test
+  void invokeMainWith400PrintsValue() {
     String[] args = {"400"};
     InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, args);
     assertThat(result.getTextWrittenToStandardOut(), containsString("400"));
+  }
+
+  @Test
+  void invokeMainWith2PrintsValue() {
+    String[] args = {"2"};
+    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, args);
+    assertThat(result.getTextWrittenToStandardOut(), containsString("is not a leap year"));
   }
 
 }
