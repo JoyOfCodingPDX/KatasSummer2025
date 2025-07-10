@@ -41,15 +41,17 @@ public class LeapYears {
   public static String prettyMsg(long yearGiven) {
     String message = "";
 
-    if (yearGiven > 0 && yearGiven < 1582) {
-      message += "";
+    if (yearGiven >= 0 && yearGiven < 1582) {
+      message += "In " + yearGiven + ", Leap Years weren't discovered yet...\n";
+      message += "If it did, ";
     }
     if (isItLeap(yearGiven)) {
-      return yearGiven + " is a leap year";
+      message += yearGiven + " is a leap year";
     }
     else {
-      return yearGiven + " is not a leap year";
+      message += yearGiven + " is not a leap year";
     }
+    return message;
   }
 
 }
