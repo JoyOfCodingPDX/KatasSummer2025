@@ -65,4 +65,11 @@ class LeapYearsIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Leap years should be less than 1000000000"));
   }
 
+  @Test
+  void invokeMainWithDecimalPrintsError() {
+    String[] args = {"1099.2"};
+    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, args);
+    assertThat(result.getTextWrittenToStandardError(), containsString("Cannot parse a non-integer"));
+  }
+
 }

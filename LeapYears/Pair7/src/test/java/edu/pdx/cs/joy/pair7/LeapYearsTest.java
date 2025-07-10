@@ -47,7 +47,8 @@ public class LeapYearsTest
   @Test
   void Display()
   {
-
+    LeapYears leapYears = new LeapYears();
+    assertThat(leapYears.displayResult(100, "Year 100 is not a leap year"));
 
   }
 
