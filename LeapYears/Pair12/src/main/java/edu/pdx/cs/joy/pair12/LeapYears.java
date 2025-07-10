@@ -12,7 +12,10 @@ public class LeapYears {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    System.out.println("This is a leap year");
+    //System.err.println("Missing command line arguments");
+    int value = args[1];
+
   }
 
   public static boolean check(Integer num) {

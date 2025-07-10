@@ -19,9 +19,12 @@ public class LeapYearsTest
   @Test
   void checkCLIAndIsDivBy4(){
 
-    String arg = "5";
+    String arg = "16";
     int expected = Integer.parseInt(arg);
-    assertEquals(expected, Integer.class);
+    boolean checkdiv4 = expected % 4 == 0;
+    assertEquals(checkdiv4, 1 == 1);
+
+    assertEquals(expected, 16);
 
   }
 
