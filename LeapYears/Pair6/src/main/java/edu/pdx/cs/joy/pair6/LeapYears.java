@@ -13,7 +13,7 @@ public class LeapYears {
   @VisibleForTesting
   public static void main(String[] args) {
     if (args.length == 0) {
-      System.err.println("Missing command line arguments");
+      System.err.println("Checking Integration Test");
 
     }
 
