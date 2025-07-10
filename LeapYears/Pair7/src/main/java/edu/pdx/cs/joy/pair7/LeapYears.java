@@ -8,24 +8,27 @@ import com.google.common.annotations.VisibleForTesting;
  * Use IntelliJ's "Refactor | Rename..." command to change the name of this
  * class (and its tests).
  */
-public static class LeapYears {
+public class LeapYears {
 
   @VisibleForTesting
   public static void main(String[] args) {
       if (args.length > 0) {
+
           try{
               LeapYears leapyear = new LeapYears();
               int year = Integer.parseInt(args[0]);
               String result = leapyear.isLeapYear(year);
               leapyear.displayResult(year, result);
           }
+
           catch (NumberFormatException e){
                 System.err.println("Invalid year format. Please enter a valid integer.");
                 return;
           }
+
           }
       }
-  }
+
 
     public static String isLeapYear(int i) {
       String s = "";
@@ -56,9 +59,13 @@ public static class LeapYears {
             }
 
       }*/
-    public static void displayResult(int year, String result) {
-        System.out.println("Year " + year + " " + result);
+    public static String displayResult(int year, String result) {
+        String finalResult = "Year " + year + " " + result;
+
+        System.out.println(finalResult);
+        return finalResult;
     }
 
 
 
+}

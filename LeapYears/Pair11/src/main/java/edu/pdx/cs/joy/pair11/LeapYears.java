@@ -15,7 +15,7 @@ public class LeapYears {
     System.err.println("Missing command line arguments");
   }
 
-  public static boolean isItLeap(double year) {
+  public static boolean isItLeap(long year) {
     if(year <= 0) {
       return false;
     }
@@ -38,8 +38,20 @@ public class LeapYears {
     return false;
   }
 
-  public static void prettyMsg(double yearGiven) {
+  public static String prettyMsg(long yearGiven) {
+    String message = "";
 
+    if (yearGiven >= 0 && yearGiven < 1582) {
+      message += "In " + yearGiven + ", Leap Years weren't discovered yet...\n";
+      message += "If it did, ";
+    }
+    if (isItLeap(yearGiven)) {
+      message += yearGiven + " is a leap year";
+    }
+    else {
+      message += yearGiven + " is not a leap year";
+    }
+    return message;
   }
 
 }

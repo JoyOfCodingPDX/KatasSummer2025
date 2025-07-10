@@ -11,37 +11,43 @@ import com.google.common.annotations.VisibleForTesting;
 public class LeapYears {
 
   @VisibleForTesting
-  public static void main(String[] args) {
-    //System.err.println("Missing command line arguments");
+  public static void main(String[] args)
+  {
 
-    int x = Integer.parseInt(args[0]);
-    try {
-      if ((x % 400) == 0) //all years divisible by 400 are leap years
+    if (args.length != 0)
+    {
+      System.err.println("Missing command line arguments");
+      return;
+    }
+
+    try
+    {
+      int year = Integer.parseInt(args[0]);
+      if ((year % 400) == 0) //all years divisible by 400 are leap years
       {
         throw new RuntimeException("This is a leap year!");
       }
-    } catch (NumberFormatException e) {
-      System.out.println("Please enter a valid year");
-    }
-    try {
-      if ((x % 100) == 0 && (x % 400) != 0) // these are not leap years
+
+      if ((year % 100) == 0 && (year % 400) != 0) // these are not leap years
       {
         throw new RuntimeException("This is NOT a leap year!");
       }
 
-      if ((x % 4 == 0) && (x % 100 != 0)) //these ARE leap years
+      if ((year % 4 == 0) && (year % 100 != 0)) //these ARE leap years
       {
         throw new RuntimeException("This is a leap year!");
       }
 
-
-      if ((x % 4) != 0) {
+      if ((year % 4) != 0)
+      {
         throw new RuntimeException("This is a leap year!");
       }
-      // public static void is_leap(double leap)3
 
-    } catch (Exception e) {
-      System.out.println("Please enter a valid year");
-    }
+  }
+  catch (Exception e)
+  {
+    System.out.println("Please enter a valid year");
+  }
   }
 }
+
