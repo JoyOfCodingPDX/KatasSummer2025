@@ -25,5 +25,9 @@ class LeapYearsIT extends InvokeMainTestCase {
     InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, "1998", "2005");
     assertThat(result.getTextWrittenToStandardOut(), containsString("2000 Leap!"));
   }
-
+  @Test
+  void invokingMainWithBadArggument(){
+    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, "ase", "abc");
+    assertThat(result.getTextWrittenToStandardError(), containsString("Invalid format!"));
+  }
 }
