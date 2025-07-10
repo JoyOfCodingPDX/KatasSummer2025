@@ -25,4 +25,23 @@ public class LeapYears {
             return "is not a leap year";
         }
     }
-}
+    public String isNotLeapYear(int i){
+      if (i <0){
+                throw new IllegalArgumentException("Year has to be before BC");
+            }
+            if(i % 4 == 0) {
+                return "is a leap year";
+            }
+            else if(i % 100 != 0 && i % 400 == 0) {
+                return "is a leap year";
+            }
+            else{
+                return "is not a leap year";
+            }
+
+      }
+
+    }
+
+
+

@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.stringContainsInOrder;
 
 public class LeapYearsTest
 {
@@ -16,9 +17,10 @@ public class LeapYearsTest
   @Test
   void divisibleByFourIsLeapYear() {
     LeapYears leapYears = new LeapYears();
-    boolean isLeapYear = leapYears.isLeapYear(2021);
-    assertThat(leapyears.isLeapYear(2021), equalTo(true));
+    String isLeapYear = leapYears.isLeapYear(2020);
+    assertThat(leapYears.isLeapYear(2020), equalTo("2020 is a leap year"));
   }
+
 }
 
 
