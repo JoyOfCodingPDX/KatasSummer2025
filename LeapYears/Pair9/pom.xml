@@ -19,14 +19,14 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
-  <developers>
+  <Mathew>
     <developer>
-      <name>Student 1</name>
+      <name>Kyle Wilson</name>
     </developer>
-    <developer>
-      <name>Student 2</name>
-    </developer>
-  </developers>
+    <Kyle>
+      <name>Matthew Tan</name>
+    </Kyle Wilson>
+  </Mathew Tan>
 
   <build>
     <plugins>
