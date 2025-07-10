@@ -16,9 +16,8 @@ public class LeapYearsTest
 
   @Test
   void divisibleByFourIsLeapYear() {
-    LeapYears leapYears = new LeapYears();
-    String isLeapYear = leapYears.isLeapYear(2020);
-    assertThat(leapYears.isLeapYear(2020), equalTo("2020 is a leap year"));
+
+    assertThat(LeapYears.isLeapYear(2020), equalTo("2020 is a leap year"));
   }
 
 }
