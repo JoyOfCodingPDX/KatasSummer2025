@@ -21,6 +21,12 @@ public class LeapYears {
     int leapyeartest = year % 4;
 
     int leapyeartest1 = year % 100;
+
+    int leapyeartest400 = year % 400;
+
+    if(leapyeartest400 == 0) {
+      return true;
+    }
     if (leapyeartest == 0){
       return true; }
 

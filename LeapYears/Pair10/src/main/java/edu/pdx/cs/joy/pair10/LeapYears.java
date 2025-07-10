@@ -25,18 +25,21 @@ public class LeapYears {
       System.out.println("ERROR: Incorrect number of arguments");
       return;
     }
+    try{
+      int hold_year =  Integer.parseInt(args[0]);
 
-    for(int i = 0; i < args.length; i++){
-      try{
-        int hold_year =  Integer.parseInt(args[i]);
-        System.out.println(hold_year);
+      if (hold_year % 4 == 0 && hold_year % 100 != 0 || hold_year % 400 == 0) {
+        System.out.println("Leap year is valid " + hold_year);
       }
-      catch(NumberFormatException e){
-        System.out.println("ERROR: Incorrect arguments type");
+      else {
+        System.out.println("Leap year is not valid " + hold_year);
       }
+
+      System.out.println(hold_year);
     }
-
-
-
+    catch(NumberFormatException e){
+      System.out.println("ERROR: Incorrect arguments type");
+    }
+    return;
   }
 }

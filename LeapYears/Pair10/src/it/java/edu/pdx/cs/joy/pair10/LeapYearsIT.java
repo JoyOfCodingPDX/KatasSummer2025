@@ -9,11 +9,10 @@ import static org.hamcrest.core.StringContains.containsString;
 
 class LeapYearsIT extends InvokeMainTestCase {
 
-  @Disabled
   @Test
   void invokingMainWithNoArgumentsPrintsMissingArgumentsToStandardError() {
-    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class);
-    assertThat(result.getTextWrittenToStandardError(), containsString("ERROR: Incorrect number of arguments"));
+    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, "2016", "");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("ERROR: Incorrect number of arguments"));
   }
 
 
