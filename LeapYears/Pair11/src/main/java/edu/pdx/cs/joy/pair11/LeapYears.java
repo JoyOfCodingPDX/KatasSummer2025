@@ -14,4 +14,16 @@ public class LeapYears {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public static boolean isItLeap(double year) {
+    if(year < 0) {
+      return false;
+    }
+
+    if(year % 400 == 0) {
+      return true;
+    }
+
+    return false;
+  }
 }
