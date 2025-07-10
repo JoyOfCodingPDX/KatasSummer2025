@@ -21,7 +21,9 @@ public class LeapYearsTest
   }
 
   @Test
-  void print2000leapYearValue() {
-    assertThat(LeapYears.getLeapYearValue(2000), equalTo(true));
+  void negativeLeapYearValue() {
+    assertThrows(IllegalArgumentException.class, () -> LeapYears.getLeapYearValue(-1));
+
+
 }
 

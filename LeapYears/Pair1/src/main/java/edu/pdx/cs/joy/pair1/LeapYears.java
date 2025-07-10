@@ -11,43 +11,42 @@ import com.google.common.annotations.VisibleForTesting;
 public class LeapYears {
 
   @VisibleForTesting
-  public static void main(String[] args)
-  {
+  public static void main(String[] args) {
 
-    if (args.length != 0)
-    {
+    if (args.length != 0) {
       System.err.println("Missing command line arguments");
       return;
     }
 
-    try
-    {
+    try {
       int year = Integer.parseInt(args[0]);
-      if ((year % 400) == 0) //all years divisible by 400 are leap years
+      if (isLeapYear(year)) //all years divisible by 400 are leap years
       {
-        throw new RuntimeException("This is a leap year!");
+        System.out.println("This is a leap year");
+      } else {
+        System.out.println("This is not a leap year");
       }
 
-      if ((year % 100) == 0 && (year % 400) != 0) // these are not leap years
-      {
-        throw new RuntimeException("This is NOT a leap year!");
-      }
-
-      if ((year % 4 == 0) && (year % 100 != 0)) //these ARE leap years
-      {
-        throw new RuntimeException("This is a leap year!");
-      }
-
-      if ((year % 4) != 0)
-      {
-        throw new RuntimeException("This is a leap year!");
-      }
+    } catch (Exception e) {
+      System.out.println("Please enter a valid year");
+    }
 
   }
-  catch (Exception e)
+  public static boolean isLeapYear(int year)
   {
-    System.out.println("Please enter a valid year");
-  }
+    if(year % 400 == 0)
+      {
+      return true;
+      }
+    else if(year % 100 != 0)
+      {
+        return false;
+      }
+    else
+    {
+      return year % 4 == 0;
+    }
   }
 }
+
 

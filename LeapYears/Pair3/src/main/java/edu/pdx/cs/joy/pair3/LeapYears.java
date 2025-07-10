@@ -36,11 +36,17 @@ public class LeapYears {
       try {
         startYear = Integer.parseInt(args[0]);
         endYear = Integer.parseInt(args[1]);
-        for (int i = startYear; i <= endYear; i++) {
-          if (isLeapYear(i)) {
-            System.out.println(i + " Leap!");
-          } else {
-            System.out.println(i);
+        if(startYear < 0 || endYear < 0){
+          System.err.println("Cannot handle negative year!");
+        } else if (startYear > endYear) {
+          System.err.println("Start year must be less than End Year");
+        } else {
+          for (int i = startYear; i <= endYear; i++) {
+            if (isLeapYear(i)) {
+              System.out.println(i + " Leap!");
+            } else {
+              System.out.println(i);
+            }
           }
         }
       } catch (NumberFormatException e) {

@@ -17,6 +17,9 @@ public class LeapYears {
 }
 
 public boolean string getLeapYearValue(int year) {
+    if (year < 0) {
+        throw new IllegalArgumentException("Year must be greater than 0");
+    }
     boolean isLeapYear = false;
     if (year < 0) {
       throw new IllegalArgumentException("Year must be greater than 0");

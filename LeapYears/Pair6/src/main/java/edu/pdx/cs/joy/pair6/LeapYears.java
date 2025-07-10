@@ -11,8 +11,12 @@ import com.google.common.annotations.VisibleForTesting;
 public class LeapYears {
 
   @VisibleForTesting
-  public static boolean main(String[] args) {
-    return false;
+  public static void main(String[] args) {
+    if (args.length == 0) {
+      System.err.println("Checking Integration Test");
+
+    }
+
     //System.err.println("Missing command line arguments");
   }
 

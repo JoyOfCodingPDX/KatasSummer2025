@@ -14,5 +14,11 @@ class LeapYearsIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 
+  @Test
+  void invokingMainWithLeapYearPrintsLeapYearMessage() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, "2020");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("2020 is a leap year"));
+  }
+
 
 }
