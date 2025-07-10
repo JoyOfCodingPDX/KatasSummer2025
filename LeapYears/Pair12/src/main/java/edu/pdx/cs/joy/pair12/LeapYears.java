@@ -46,10 +46,6 @@ public class LeapYears {
     if (num % 100 == 0) {
       return false;
     }
-    if (num % 4 == 0) {
-      return true;
-    }
-
-    return false;
+    return num % 4 == 0;
   }
 }

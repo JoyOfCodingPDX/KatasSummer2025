@@ -72,4 +72,10 @@ class LeapYearsIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Cannot parse a non-integer"));
   }
 
+  @Test
+  void invokeMainWithNonNumberPrintsError() {
+    String[] args = {"toast"};
+    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, args);
+    assertThat(result.getTextWrittenToStandardError(), containsString("Cannot parse a non-integer"));
+  }
 }
