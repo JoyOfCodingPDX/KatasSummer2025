@@ -12,6 +12,41 @@ public class LeapYears {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+
+    if (args.length != 0) {
+      System.err.println("Missing command line arguments");
+      return;
+    }
+
+    try {
+      int year = Integer.parseInt(args[0]);
+      if (isLeapYear(year)) //all years divisible by 400 are leap years
+      {
+        System.out.println("This is a leap year");
+      } else {
+        System.out.println("This is not a leap year");
+      }
+
+    } catch (Exception e) {
+      System.out.println("Please enter a valid year");
+    }
+
+  }
+  public static boolean isLeapYear(int year)
+  {
+    if(year % 400 == 0)
+      {
+      return true;
+      }
+    else if(year % 100 != 0)
+      {
+        return false;
+      }
+    else
+    {
+      return year % 4 == 0;
+    }
   }
 }
+
+
