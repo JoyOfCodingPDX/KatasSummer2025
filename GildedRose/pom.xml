@@ -3,30 +3,21 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>edu.pdx.cs.joy.katas</groupId>
-    <artifactId>LeapYearsKatas</artifactId>
+    <artifactId>KatasSummer2025</artifactId>
     <version>1.0.0</version>
   </parent>
-  <groupId>edu.pdx.cs.joy.pair9</groupId>
-  <artifactId>LeapYears</artifactId>
+  <groupId>edu.pdx.cs.joy.everyone</groupId>
+  <artifactId>GildedRose</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>LeapYears Pair 9</name>
-  <description>Leap Year Kata</description>
+  <name>Gilded Rose</name>
+  <description>Refactoring Kata from Emily Bache</description>
   <url>http://www.cs.pdx.edu</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-
-  <developers>
-    <developer>
-      <name>Kyle Wilson</name>
-    </developer>
-    <developer>
-      <name>Matthew Tan</name>
-    </developer>
-  </developers>
 
   <build>
     <plugins>
@@ -37,7 +28,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.pair9.LeapYears</mainClass>
+              <mainClass>edu.pdx.cs.joy.everyone.Kata</mainClass>
             </manifest>
           </archive>
         </configuration>
