@@ -12,8 +12,6 @@ public class LeapYears {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
-  }
   try {
     int year = Integer.parseInt(args[0]);
     if (isLeapYear(year)) {
@@ -26,10 +24,12 @@ public class LeapYears {
   }
 }
 
-    public static boolean isLeapYear(int year) {
+  public static boolean isLeapYear(int year) {
     if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
       return true;
     }
+
+    return false;
   }
 
 }
