@@ -2,6 +2,9 @@ package edu.pdx.cs.joy.pair6;
 
 import org.junit.jupiter.api.Test;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+
 public class LeapYearsTest
 {
 
@@ -9,5 +12,53 @@ public class LeapYearsTest
   void canInstantiateKataClass() {
     new LeapYears();
   }
+
+  @Test
+  void canRunIsLeapYear(){
+    LeapYears leapyear1 = new LeapYears();
+    assertThat(leapyear1.isLeapYear(1582), equalTo(false));
+  }
+
+
+
+  @Test
+  void yearNotDivisibleBy4IsNotLeapYear() {
+    LeapYears LeapYears2 = new LeapYears();
+    assertThat(LeapYears2.isLeapYear(2017), equalTo(false));
+  }
+
+  @Test
+  void yearDivisibleBy4isLeapYear() {
+    LeapYears leapyears3 = new LeapYears();
+    assertThat(leapyears3.isLeapYear(2016), equalTo(true));
+  }
+
+  @Test
+  void yearDivisibleBy100isLeapYear() {
+    LeapYears leapyears4 = new LeapYears();
+    assertThat(leapyears4.isLeapYear(2000), equalTo(true));
+  }
+
+  @Test
+  void yearDivisibleBy400isLeapYear() {
+    LeapYears leapyears5 = new LeapYears();
+    assertThat(leapyears5.isLeapYear(2400), equalTo(true));
+  }
+
+
+  @Test
+  void yearDivisibleBy400and100IsLeapYear() {
+    LeapYears leapyears6 = new LeapYears();
+    assertThat(leapyears6.isLeapYear(2000), equalTo(true));
+
+  }
+
+  @Test
+  void yearDivisibleBy4and100IsNotLeapYear() {
+    LeapYears leapyears7 = new LeapYears();
+    assertThat(leapyears7.isLeapYear(2008), equalTo(true));
+
+  }
+
 
 }
