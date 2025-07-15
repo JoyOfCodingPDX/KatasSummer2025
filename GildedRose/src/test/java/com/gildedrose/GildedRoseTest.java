@@ -45,4 +45,26 @@ class GildedRoseTest {
     assertThat(item.sellIn, equalTo(1));
     assertThat(item.quality, equalTo(50));
   }
+
+  @Disabled // Conjured items not implemented yet
+  @Test
+  void qualityOfConjuredItemDecreasesByTwo() {
+    Item item = updateQuality(new Item("Conjured Item", 3, 6));
+    assertThat(item.sellIn, equalTo(2));
+    assertThat(item.quality, equalTo(4));
+  }
+
+  @Test
+  void qualityOfBackstageDropsToZeroAfterConcert() {
+    Item item = updateQuality(new Item("Backstage passes to a TAFKAL80ETC concert", 0, 57));
+    assertThat(item.sellIn, equalTo(-1));
+    assertThat(item.quality, equalTo(0));
+  }
+
+  @Test
+  void qualityOfItemDecreasesTwiceAsFastAfterSellInDate() {
+    Item item = updateQuality(new Item("Normal Item", 0, 20));
+    assertThat(item.sellIn, equalTo(-1));
+    assertThat(item.quality, equalTo(18));
+  }
 }
