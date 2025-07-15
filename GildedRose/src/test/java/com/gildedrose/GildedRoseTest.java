@@ -108,4 +108,47 @@ class GildedRoseTest {
     assertThat(item.sellIn, equalTo(0));
     assertThat(item.quality, equalTo(80));
   }
+
+  @Test
+  void qualityOfItemCannotBeNegative() {
+    Item item = updateQuality(new Item("Normal Item", 0, 0));
+    assertThat(item.sellIn, equalTo(-1));
+    assertThat(item.quality, equalTo(0));
+  }
+
+  @Test
+  void qualityOfItemCannotExceedFifty() {
+    Item item = updateQuality(new Item("Aged Brie", 0, 50));
+    assertThat(item.sellIn, equalTo(-1));
+    assertThat(item.quality, equalTo(50));
+  }
+
+  @Test
+  void qualityOfItemCannotExceedFiftyEvenWithBackstagePasses() {
+    Item item = updateQuality(new Item("Backstage passes to a TAFKAL80ETC concert", 0, 50));
+    assertThat(item.sellIn, equalTo(-1));
+    assertThat(item.quality, equalTo(0)); // Should drop to zero after the concert
+  }
+
+  @Test
+  void qualityOfItemCannotExceedFiftyEvenWithConjuredItems() {
+    Item item = updateQuality(new Item("Conjured Mana Cake", 0, 50));
+    assertThat(item.sellIn, equalTo(-1));
+    assertThat(item.quality, equalTo(48)); // Assuming conjured items decrease by two
+  }
+
+  @Test
+  void qualityOfItemWithNegativeSellInDecreasesByTwo() {
+    Item item = updateQuality(new Item("Normal Item", -1, 20));
+    assertThat(item.sellIn, equalTo(-2));
+    assertThat(item.quality, equalTo(18));
+  }
+
+  @Test
+  void qualityOfItemWithNegativeSellInCannotBeNegative() {
+    Item item = updateQuality(new Item("Normal Item", -1, 0));
+    assertThat(item.sellIn, equalTo(-2));
+    assertThat(item.quality, equalTo(0));
+  }
+
 }
