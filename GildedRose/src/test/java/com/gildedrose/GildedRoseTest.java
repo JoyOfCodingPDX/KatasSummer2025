@@ -97,14 +97,14 @@ class GildedRoseTest {
 
   @Test
   void qualityOfSulfurasNeverChanges() {
-    Item item = updateQuality(new Item("Sulfuras, Hand of Ragnaros", 0, 80));
+    Item item = updateQuality(new Sulfuras(0, 80));
     assertThat(item.sellIn, equalTo(0));
     assertThat(item.quality, equalTo(80));
   }
 
   @Test
   void qualityOfSulfurasNeverDecreases() {
-    Item item = updateQuality(new Item("Sulfuras, Hand of Ragnaros", 0, 80), 10);
+    Item item = updateQuality(new Sulfuras(0, 80), 10);
     assertThat(item.sellIn, equalTo(0));
     assertThat(item.quality, equalTo(80));
   }

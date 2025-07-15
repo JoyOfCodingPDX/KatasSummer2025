@@ -4,7 +4,6 @@ class GildedRose {
     static final int MAXIMUM_QUALITY = 50;
     static final String AGED_BRIE = "Aged Brie";
     static final String BACKSTAGE_PASSES = "Backstage passes to a TAFKAL80ETC concert";
-    static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
     Item[] items;
 
     public GildedRose(Item[] items) {
@@ -13,10 +12,14 @@ class GildedRose {
 
     public void updateQuality() {
       for (Item item : items) {
+          if (item instanceof Sulfuras) {
+              ((Sulfuras) item).updateQuality();
+              continue;
+          }
         if (!item.name.equals(AGED_BRIE)
           && !item.name.equals(BACKSTAGE_PASSES)) {
           if (item.quality > 0) {
-            if (!item.name.equals(SULFURAS)) {
+            if (!item.name.equals(Sulfuras.SULFURAS)) {
               item.quality--;
             }
           }
@@ -40,7 +43,7 @@ class GildedRose {
           }
         }
 
-        if (!item.name.equals(SULFURAS)) {
+        if (!item.name.equals(Sulfuras.SULFURAS)) {
           item.sellIn--;
         }
 
@@ -48,7 +51,7 @@ class GildedRose {
           if (!item.name.equals(AGED_BRIE)) {
             if (!item.name.equals(BACKSTAGE_PASSES)) {
               if (item.quality > 0) {
-                if (!item.name.equals(SULFURAS)) {
+                if (!item.name.equals(Sulfuras.SULFURAS)) {
                   item.quality--;
                 }
               }
