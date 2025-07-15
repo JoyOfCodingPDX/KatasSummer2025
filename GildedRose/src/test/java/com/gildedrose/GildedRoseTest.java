@@ -26,9 +26,15 @@ class GildedRoseTest {
   }
 
   private static Item updateQuality(Item originalItem) {
+    return updateQuality(originalItem, 1);
+  }
+
+  private static Item updateQuality(Item originalItem, int numberOfDays) {
     Item[] items = new Item[]{originalItem};
     GildedRose app = new GildedRose(items);
-    app.updateQuality();
+    for (int i = 0; i < numberOfDays; i++) {
+      app.updateQuality();
+    }
     return app.items[0];
   }
 
@@ -66,5 +72,40 @@ class GildedRoseTest {
     Item item = updateQuality(new Item("Normal Item", 0, 20));
     assertThat(item.sellIn, equalTo(-1));
     assertThat(item.quality, equalTo(18));
+  }
+
+  @Test
+  void qualityOfBackstagePassIncreasesByOneWhenSellInIsMoreThanTen() {
+    Item item = updateQuality(new Item("Backstage passes to a TAFKAL80ETC concert", 17, 20), 7);
+    assertThat(item.sellIn, equalTo(10));
+    assertThat(item.quality, equalTo(27));
+  }
+
+  @Test
+  void qualityOfBackstagePassIncreasesByTwoWhenSellInIsTenOrLess() {
+    Item item = updateQuality(new Item("Backstage passes to a TAFKAL80ETC concert", 10, 20), 5);
+    assertThat(item.sellIn, equalTo(5));
+    assertThat(item.quality, equalTo(30));
+  }
+
+  @Test
+  void qualityOfBackstagePassIncreasesByThreeWhenSellInIsFiveOrLess() {
+    Item item = updateQuality(new Item("Backstage passes to a TAFKAL80ETC concert", 5, 20), 3);
+    assertThat(item.sellIn, equalTo(2));
+    assertThat(item.quality, equalTo(29));
+  }
+
+  @Test
+  void qualityOfSulfurasNeverChanges() {
+    Item item = updateQuality(new Item("Sulfuras, Hand of Ragnaros", 0, 80));
+    assertThat(item.sellIn, equalTo(0));
+    assertThat(item.quality, equalTo(80));
+  }
+
+  @Test
+  void qualityOfSulfurasNeverDecreases() {
+    Item item = updateQuality(new Item("Sulfuras, Hand of Ragnaros", 0, 80), 10);
+    assertThat(item.sellIn, equalTo(0));
+    assertThat(item.quality, equalTo(80));
   }
 }
