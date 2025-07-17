@@ -13,6 +13,15 @@ class DiamondIT extends InvokeMainTestCase {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class);
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
-
+  
+  @Test
+  void mainWithBPrintsDiamond() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "B");
+    String expected =
+            " A\n" +
+                    "B B\n" +
+                    " A\n";
+    assertThat(result.getTextWrittenToStandardOut(), containsString(expected));
+  }
 
 }

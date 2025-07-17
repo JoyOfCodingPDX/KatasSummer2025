@@ -25,5 +25,14 @@ public class DiamondTest
       assertThat(asciiValue, is('A'));
   }
 
+  @Test
+    void testCharStaysTheSame(){
+      char b = 'B';
+      int asciiValue = Diamond.getValue(b);
+      char charValue = Diamond.getChar(asciiValue);
+      assertThat(charValue, is('B'));
+  }
+
+
 
 }
