@@ -10,6 +10,10 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Diamond {
 
+  char character;
+
+  Diamond(char character) { this.character = character; }
+
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
