@@ -20,6 +20,22 @@ public class Diamond {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+
+    if( args.length < 1) {
+      System.err.println("Missing command line arguments");
+      return;
+    }
+
+    char diamond = (char) args[0].charAt(0);
+    int spaceValue = getValue(diamond) + 1;
+    String spaces = String.format( "%"+ spaceValue + "s", "");
+
+//    System.out.println("Number of spaces: " + spaces);
+
+    System.out.println(diamond);
+
+
+
   }
+
 }
