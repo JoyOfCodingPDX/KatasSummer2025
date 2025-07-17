@@ -12,6 +12,18 @@ public class Diamond {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    if (args.length != 1) {
+      System.err.println("Missing command line arguments");
+    }
+  char end = args[0].toUpperCase().charAt(0);
+    if( end < 'A' || end > 'Z') {
+      System.err.println("Invalid end character. Enter A through Z");
+      return;
+    }
+
+    System.out.println(generateDiamond(end)); // Create and Implement Generate Diamond
+
+    public static
   }
+
 }
