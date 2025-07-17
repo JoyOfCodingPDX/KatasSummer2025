@@ -29,10 +29,10 @@ public class Diamond {
     // for loop to print out values from A to given letter
     for (char ch = 'A'; ch <= input; ch++) {
       if(ch == 'A') {
-        System.out.println(ch);
+        System.out.print(ch);
       } else {
         System.out.print(ch);
-        System.out.println(ch);
+        System.out.print(ch);
       }
       System.out.println(); // New line for separation
     }
