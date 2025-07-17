@@ -25,5 +25,16 @@ public class Diamond {
     Character input = args[0].charAt(0);
 
     System.out.println(input);
+
+    // for loop to print out values from A to given letter
+    for (char ch = 'A'; ch <= input; ch++) {
+      if(ch == 'A') {
+        System.out.println(ch);
+      } else {
+        System.out.print(ch);
+        System.out.println(ch);
+      }
+      System.out.println(); // New line for separation
+    }
   }
 }
