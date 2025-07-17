@@ -28,13 +28,36 @@ public class Diamond {
 
     char diamond = (char) args[0].charAt(0);
     int spaceValue = getValue(diamond) + 1;
-    System.out.println(diamond);
 
 //    System.out.println("Number of spaces: " + spaces);
-
     for (int i = 0; i <= getValue(diamond); ++i) {
-      String spaces = String.format("%"+i+"s", "");
+      int count = getValue(diamond) - i;
+      String spaces = "";
+      if(count == 0) {
+        spaces = "";
+      }
+      else {
+        spaces = String.format("%" + count + "s", "");
+      }
       String line = spaces + getChar(i);
+      if( i > 0) {
+        line += String.format("%"+(i*2-1)+"s","") + getChar(i);
+      }
+      System.out.println(line);
+    }
+    for (int i = getValue(diamond)-1; i >= 0; --i) {
+      int count = getValue(diamond) - i;
+      String spaces = "";
+      if(count == 0) {
+        spaces = "";
+      }
+      else {
+        spaces = String.format("%" + count + "s", "");
+      }
+      String line = spaces + getChar(i);
+      if( i > 0) {
+        line += String.format("%"+(i*2-1)+"s","") + getChar(i);
+      }
       System.out.println(line);
     }
 
