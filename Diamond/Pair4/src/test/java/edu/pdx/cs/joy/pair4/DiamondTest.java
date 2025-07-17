@@ -8,6 +8,7 @@ public class DiamondTest
 //  private char letter;
 //
 //
+   //
 
   @Test
   void canInstantiateKataClass() {
