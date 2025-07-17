@@ -25,8 +25,8 @@ public class Diamond {
     }
     char[] hold_end = args[0].toCharArray();
 
-    if(hold_end[0] < 60) {
-      hold_end[0] = (char)(hold_end[0] - '0');
+    if(hold_end[0] < 60 || hold_end[0] > 90) {
+      hold_end[0] = (char)(hold_end[0] - 32);
     }
 
     System.out.println((int) hold_end[0]);
