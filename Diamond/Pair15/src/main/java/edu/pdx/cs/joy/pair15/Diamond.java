@@ -36,5 +36,15 @@ public class Diamond {
       }
       System.out.println(); // New line for separation
     }
+
+    for (char ch = input; ch >= input; ch--) {
+      if(ch == 'A') {
+        System.out.print(ch);
+      } else {
+        System.out.print(ch);
+        System.out.print(ch);
+      }
+      System.out.println(); // New line for separation
+    }
   }
 }
