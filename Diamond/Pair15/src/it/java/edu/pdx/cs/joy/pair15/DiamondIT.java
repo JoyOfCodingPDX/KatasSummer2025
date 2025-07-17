@@ -28,14 +28,31 @@ class DiamondIT extends InvokeMainTestCase {
   @Test
   void printRangeofLetter() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "C");
-    assertThat(result.getTextWrittenToStandardOut(), containsString("A\n" + "B\n" + "C\n"));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("A" + System.lineSeparator()));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("B" + System.lineSeparator()));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("C" + System.lineSeparator()));
   }
 
   @Test
   void printDouble() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "C");
-    assertThat(result.getTextWrittenToStandardOut(), containsString("A\n" + "BB\n" + "CC\n"));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("A" + System.lineSeparator()));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("BB" + System.lineSeparator()));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("CC" + System.lineSeparator()));
   }
+
+  @Test
+  void printDoubleReverse() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "C");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("A" + System.lineSeparator()));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("BB" + System.lineSeparator()));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("CC" + System.lineSeparator()));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("BB" + System.lineSeparator()));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("A" + System.lineSeparator()));
+
+
+  }
+
 
 
 }
