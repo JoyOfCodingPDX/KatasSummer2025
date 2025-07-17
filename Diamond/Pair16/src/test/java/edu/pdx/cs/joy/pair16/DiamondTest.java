@@ -21,8 +21,9 @@ public class DiamondTest
 
   @Test
   void canGetChar() {
-      int asciiValue = Diamond.getChar(0);
-      assertThat(asciiValue, is("A"));
+      char asciiValue = Diamond.getChar(0);
+      assertThat(asciiValue, is('A'));
   }
+
 
 }
