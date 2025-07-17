@@ -16,9 +16,14 @@ class DiamondIT extends InvokeMainTestCase {
   @Test
   void CanPrintLetterA() {
 
-    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "a");
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "A");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("A"));
+  }
 
-    assertThat(result.getTextWrittenToStandardOut(), containsString("a"));
+  @Test
+  void invokingMainWithNonLetterCharacter() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "-");
+    assertThat(result.getTextWrittenToStandardError(), containsString("Illegal character"));
   }
 
 

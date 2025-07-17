@@ -16,16 +16,17 @@ public class Diamond {
     letterValue = (int) letter - 64;
   }
 
-  public String outputDiamond() {
+  public String[] outputDiamond() {
     int length = (letterValue * 2) - 1;
-    String result = "";
+    String[] result = new String[length];
     for(int i = 0; i < length; i++) {
-      if(i == length/2) {
-        result = result + "A";
-      } else {
-        result = result + " ";
+      for(int j = 0; j < length; j++){
+        if(j == length/2-i) {
+          result[i] = result[i] + "A";
+        } else {
+          result[i] = result[i] + " ";
       }
-    }
+    }}
     return result;
   }
 
