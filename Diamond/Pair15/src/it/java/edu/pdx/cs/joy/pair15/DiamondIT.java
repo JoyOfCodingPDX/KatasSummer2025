@@ -25,5 +25,19 @@ class DiamondIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardOut(), containsString("A"));
   }
 
+  @Test
+  void printRangeofLetter() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "C");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("A\n" + "B\n" + "C\n"));
+  }
+
+  @Test
+  void printDouble() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "C");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("A\n"));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("BB\n"));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("CC\n"));
+  }
+
 
 }
