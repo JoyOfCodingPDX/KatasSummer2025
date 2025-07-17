@@ -29,7 +29,9 @@ public class DiamondTest
     Diamond displayDiamond = new Diamond('1');
     assertThrows(IllegalArgumentException.class, displayDiamond::getNumber);
   }
-
-
-
+  @Test
+  void diamondIsA(){
+    Diamond displayDiamond = new Diamond('A');
+    assertThat(displayDiamond.printDiamond(), equalTo("A"));
+  }
 }
