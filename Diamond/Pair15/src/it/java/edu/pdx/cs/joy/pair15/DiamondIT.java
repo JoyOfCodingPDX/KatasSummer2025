@@ -24,4 +24,6 @@ class DiamondIT extends InvokeMainTestCase {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "A");
     assertThat(result.getTextWrittenToStandardOut(), containsString("A"));
   }
+
+
 }

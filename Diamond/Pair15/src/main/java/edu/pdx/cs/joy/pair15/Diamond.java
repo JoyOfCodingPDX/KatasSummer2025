@@ -22,6 +22,8 @@ public class Diamond {
       return;
     }
 
-    System.out.println(args[0]);
+    Character input = args[0].charAt(0);
+
+    System.out.println(input);
   }
 }
