@@ -2,6 +2,8 @@ package edu.pdx.cs.joy.pair13;
 
 import com.google.common.annotations.VisibleForTesting;
 
+import static java.lang.StringUTF16.toUpperCase;
+
 /**
  * A class for getting started with a code kata
  *
@@ -12,7 +14,7 @@ public class Diamond {
 
   char character;
 
-  Diamond(char character) { this.character = character; }
+  Diamond(char character) { this.character = Character.toUpperCase(character); }
 
 
 
@@ -26,9 +28,17 @@ public class Diamond {
 
   public int getNumber() {
     if (Character.isLetter(character)) {
-      return Integer.parseInt(String.valueOf(Character.toUpperCase(character) - 'A' + 1));
+      return Integer.parseInt(String.valueOf(character - 'A' + 1));
     } else {
       throw new IllegalArgumentException("Character must be a letter");
     }
+  }
+
+  public String printDiamond() {
+    if(this.character == 'A') {
+      return "A";
+    }
+    else
+      return "FUCK";
   }
 }
