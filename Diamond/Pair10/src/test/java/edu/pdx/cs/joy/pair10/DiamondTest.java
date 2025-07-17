@@ -23,4 +23,17 @@ public class DiamondTest
     assertEquals(test.outputDiamond(), " A ");
   }
 
+  @Test
+  void printThreeRowOfSmallGrid() {
+    Diamond test = new Diamond('B');
+    String[] arr = {" A ", "A A", " A "};
+    String[] output = test.outputDiamond();
+    boolean x = true;
+    for (int i=0; i < output.length; i++){
+      x = x && output[i].equals(arr[i]);
+      System.out.println(output[i]);
+    }
+    assertTrue(x);
+  }
+
 }
