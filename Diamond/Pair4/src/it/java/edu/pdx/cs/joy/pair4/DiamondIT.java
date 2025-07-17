@@ -8,6 +8,20 @@ import static org.hamcrest.core.StringContains.containsString;
 
 class DiamondIT extends InvokeMainTestCase {
 
+//  @Test
+//  void testLetter(char letter){
+//    System.out.println('a' + letter);
+//  }
+
+  @Test
+  void CanPrintLetterA() {
+    
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "a");
+
+    assertThat(result.getTextWrittenToStandardOut(), containsString("a"));
+  }
+
+
   @Test
   void invokingMainWithNoArgumentsPrintsMissingArgumentsToStandardError() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class);
