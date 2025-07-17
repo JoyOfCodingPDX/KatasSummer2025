@@ -11,3 +11,9 @@ public class DiamondTest
   }
 
 }
+
+
+@Test
+void returnsSingleAWhenInputIsA() {
+  assertEquals("A\n", Diamond.print('A'));
+}
