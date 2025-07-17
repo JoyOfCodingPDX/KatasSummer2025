@@ -31,9 +31,23 @@ public class Diamond {
       StringBuilder diamond = new StringBuilder();
 
       for(int i = 0; i < size; i++) {
-        char ch = (char)('A' + i);
+        char ch = (char) ('A' + i);
         int outerSpaces = size - i;
-        int innerSpaces =
+        int innerSpaces = i == 0 ? 0 : 2 * i - 1;
+        diamond.append(ch);
+        if (i != 0) {
+          diamond.append(" ".repeat(innerSpaces)).append(ch);
+        }
+
+        diamond.append("\n");
+      }
+      for(int i = 0; i < size; i++) {
+        char ch = (char) ('A' + i);
+        int outerSpaces = size +1;
+        int innerSpaces = i == 0 ? 0 : 2 * i - 1;
+
+
+
 
 
       }
