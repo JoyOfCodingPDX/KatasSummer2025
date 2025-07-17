@@ -12,6 +12,18 @@ public class Diamond {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+
+    // Need to devise some logic for the outputting the diamond
+    // Need to figure out whether iterative or recursive solution will be the best approach
+
+    // get input from the command line (which is going to be a letter)
+    // using 2 different loops
+
+    // The target letter to go to
+    String targetMiddle = args[0];
+    char target = (char) targetMiddle[0];
+
+
+    //System.err.println("Missing command line arguments");
   }
 }
