@@ -30,4 +30,6 @@ public class DiamondTest
     assertThrows(IllegalArgumentException.class, displayDiamond::getNumber);
   }
 
+
+
 }
