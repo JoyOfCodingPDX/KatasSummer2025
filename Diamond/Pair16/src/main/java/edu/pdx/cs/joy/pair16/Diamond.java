@@ -10,8 +10,32 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Diamond {
 
+  public static int getValue(char c) {
+    return ((int) c) - 65;
+  }
+
+  public static char getChar(int value) {
+    return (char) (value + 65);
+  }
+
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+
+    if( args.length < 1) {
+      System.err.println("Missing command line arguments");
+      return;
+    }
+
+    char diamond = (char) args[0].charAt(0);
+    int spaceValue = getValue(diamond) + 1;
+    String spaces = String.format( "%"+ spaceValue + "s", "");
+
+//    System.out.println("Number of spaces: " + spaces);
+
+    System.out.println(diamond);
+
+
+
   }
+
 }

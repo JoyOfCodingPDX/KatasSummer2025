@@ -12,6 +12,29 @@ public class Diamond {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    if (args.length == 0) {
+      System.err.println("Missing command line arguments");
+      return;
+    }
+
+    if (args.length > 1) {
+      System.err.println("Too many command line arguments");
+      return;
+    }
+
+    Character input = args[0].charAt(0);
+
+    System.out.println(input);
+
+    // for loop to print out values from A to given letter
+    for (char ch = 'A'; ch <= input; ch++) {
+      if(ch == 'A') {
+        System.out.println(ch);
+      } else {
+        System.out.print(ch);
+        System.out.println(ch);
+      }
+      System.out.println(); // New line for separation
+    }
   }
 }
