@@ -21,7 +21,12 @@ public class Diamond {
 
     // The target letter to go to
     String targetMiddle = args[0];
-    char target = (char) targetMiddle[0];
+
+    int iteratorMax = Integer.parseInt(args[0]);
+
+    for (int i = 0; i < iteratorMax; ++i) {
+      System.out.println((char) ('A' + i));
+    }
 
 
     //System.err.println("Missing command line arguments");
