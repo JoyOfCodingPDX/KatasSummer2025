@@ -24,9 +24,9 @@ public class Diamond {
 
   }
 
-  public String getNumber() {
+  public int getNumber() {
     if (Character.isLetter(character)) {
-      return String.valueOf(Character.toUpperCase(character) - 'A' + 1);
+      return Integer.parseInt(String.valueOf(Character.toUpperCase(character) - 'A' + 1));
     } else {
       throw new IllegalArgumentException("Character must be a letter");
     }
