@@ -41,5 +41,18 @@ class DiamondIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardOut(), containsString("CC" + System.lineSeparator()));
   }
 
+  @Test
+  void printDoubleReverse() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "C");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("A" + System.lineSeparator()));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("BB" + System.lineSeparator()));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("CC" + System.lineSeparator()));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("BB" + System.lineSeparator()));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("A" + System.lineSeparator()));
+
+
+  }
+
+
 
 }
