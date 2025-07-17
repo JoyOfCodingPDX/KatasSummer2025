@@ -28,13 +28,15 @@ public class Diamond {
 
     char diamond = (char) args[0].charAt(0);
     int spaceValue = getValue(diamond) + 1;
-    String spaces = String.format( "%"+ spaceValue + "s", "");
+    System.out.println(diamond);
 
 //    System.out.println("Number of spaces: " + spaces);
 
-    System.out.println(diamond);
-
-
+    for (int i = 0; i <= getValue(diamond); ++i) {
+      String spaces = String.format("%"+i+"s", "");
+      String line = spaces + getChar(i);
+      System.out.println(line);
+    }
 
   }
 

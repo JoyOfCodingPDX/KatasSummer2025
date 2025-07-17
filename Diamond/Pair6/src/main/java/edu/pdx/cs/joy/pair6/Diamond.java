@@ -32,6 +32,21 @@ public class Diamond {
 
     return sb.toString();
   }
+  private static String buildLine(int i, int size) {
+    char letter = (char) ('A' + i);
+    StringBuilder line = new StringBuilder();
 
+    line.append(" ".repeat(size - i));
+
+
+    line.append(letter);
+
+    if (i > 0) {
+      line.append(" ".repeat(i * 2 - 1));
+      line.append(letter);
+    }
+
+    return line.toString();
+  }
 
 }
