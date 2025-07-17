@@ -19,3 +19,11 @@ public class DiamondTest
     String actual = diamond.print();
     assertEquals(expected, actual);
   }
+
+  @Test
+  void diamondWithB() {
+    Diamond diamond = new Diamond('B');
+    String expected = " A\n" + "B B\n" + " A\n";
+    String actual = diamond.print();
+    assertEquals(expected, actual);
+  }
