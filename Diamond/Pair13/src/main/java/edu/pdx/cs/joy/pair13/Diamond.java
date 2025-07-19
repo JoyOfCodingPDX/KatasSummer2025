@@ -2,8 +2,6 @@ package edu.pdx.cs.joy.pair13;
 
 import com.google.common.annotations.VisibleForTesting;
 
-import static java.lang.StringUTF16.toUpperCase;
-
 /**
  * A class for getting started with a code kata
  *
