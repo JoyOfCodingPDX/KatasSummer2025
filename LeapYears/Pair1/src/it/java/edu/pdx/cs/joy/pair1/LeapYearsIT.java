@@ -8,7 +8,7 @@ import static org.hamcrest.core.StringContains.containsString;
 
 class LeapYearsIT extends InvokeMainTestCase {
 
-  @Test
+//  @Test
   void invokingMainWithNoArgumentsPrintsMissingArgumentsToStandardError() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class);
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));

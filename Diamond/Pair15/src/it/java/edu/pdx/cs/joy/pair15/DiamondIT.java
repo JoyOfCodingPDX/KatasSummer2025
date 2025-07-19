@@ -14,5 +14,45 @@ class DiamondIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 
+  @Test
+  void invokingMainWithTooManyArgumentsPrintsTooStandardError() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "A", "B");
+    assertThat(result.getTextWrittenToStandardError(), containsString("Too many command line arguments"));
+  }
+  @Test
+  void commandLineArgumentsArePassedToMain() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "A");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("A"));
+  }
+
+  @Test
+  void printRangeofLetter() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "C");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("A" + System.lineSeparator()));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("B" + System.lineSeparator()));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("C" + System.lineSeparator()));
+  }
+
+  @Test
+  void printDouble() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "C");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("A" + System.lineSeparator()));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("BB" + System.lineSeparator()));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("CC" + System.lineSeparator()));
+  }
+
+  @Test
+  void printDoubleReverse() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "C");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("A" + System.lineSeparator()));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("BB" + System.lineSeparator()));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("CC" + System.lineSeparator()));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("BB" + System.lineSeparator()));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("A" + System.lineSeparator()));
+
+
+  }
+
+
 
 }
