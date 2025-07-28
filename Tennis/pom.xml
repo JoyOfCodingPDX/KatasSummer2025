@@ -19,6 +19,33 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+  <developers>
+    <developer>
+      <name>David Whitlock</name>
+      <roles>
+        <role>facilitator</role>
+      </roles>
+    </developer>
+    <developer>
+      <name>Mobber 1</name>
+    </developer>
+    <developer>
+      <name>Mobber 2</name>
+    </developer>
+    <developer>
+      <name>Mobber 3</name>
+    </developer>
+    <developer>
+      <name>Mobber 4</name>
+    </developer>
+    <developer>
+      <name>Mobber 5</name>
+    </developer>
+    <developer>
+      <name>Mobber 6</name>
+    </developer>
+  </developers>
+
   <build>
     <plugins>
       <plugin>
