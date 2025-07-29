@@ -1,7 +1,7 @@
 Replace your initials in this file with the word "HERE" to demonstrate that you can push to this repository.
 
- 1. HA
- 2. HERE
+ 1. MT
+ 2. SK
  3. HERE
  4. HERE
  5. MD
@@ -11,8 +11,8 @@ Replace your initials in this file with the word "HERE" to demonstrate that you 
  9. MD
 10. HERE
 11. HERE
-12. ML
-13. RL
+12. HERE
+13. HERE
 14. HERE
 15. HERE
 16. HERE
@@ -27,6 +27,8 @@ Replace your initials in this file with the word "HERE" to demonstrate that you 
 25. KT
 26. MT
 27. ST
-28. KW
+28. HERE
 29. KW
+30. HERE
+31. SK
 

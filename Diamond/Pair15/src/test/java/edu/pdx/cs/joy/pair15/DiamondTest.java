@@ -10,4 +10,5 @@ public class DiamondTest
     new Diamond();
   }
 
+
 }
