@@ -38,7 +38,7 @@ public class DiamondTest
 
   @Test
   void printFiveRowOfSmallGrid() {
-    Diamond test = new Diamond('Z');
+    Diamond test = new Diamond('K');
     String[] arr = {"  A  ", " B B ","C   C", " B B ", "  A  "};
     String[] output = test.outputDiamond();
     boolean x = true;
