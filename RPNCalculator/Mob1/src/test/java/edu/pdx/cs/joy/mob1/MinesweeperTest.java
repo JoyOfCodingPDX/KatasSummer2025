@@ -2,12 +2,12 @@ package edu.pdx.cs.joy.mob1;
 
 import org.junit.jupiter.api.Test;
 
-public class KataTest
+public class MinesweeperTest
 {
 
   @Test
   void canInstantiateKataClass() {
-    new Kata();
+    new Minesweeper();
   }
 
 }
