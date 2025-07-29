@@ -19,8 +19,8 @@ public class TennisTest
   @Test
   void startGameAtLoveAll() {
     Game g = new Game();
-    assertEquals(g.getP1Score(), 0);
-    assertEquals(g.getP2Score(), 0);
+    assertThat(g.getP1Score(), equalTo(0));
+    assertThat(g.getP2Score(), equalTo(0));
   }
 
   @Test
@@ -40,8 +40,31 @@ public class TennisTest
   void incrPlayer1Score(){
     Game g = new Game();
     g.P1Win();
-    assertEquals(g.getP1Score(), 1);
-    assertEquals(g.getP2Score(), 0);
+    assertThat(g.getP1Score(), equalTo(1));
+    assertThat(g.getP2Score(), equalTo(0));
   }
+
+  @Test
+  void incrPlayer2Score() {
+    Game g = new Game();
+    g.P2Win();
+    assertThat(g.getP1Score(), equalTo(0));
+    assertThat(g.getP2Score(), equalTo(1));
+  }
+
+  @Test
+  void player1WinsGame() {
+    Game g = new Game();
+    g.P1Win();
+    g.P1Win();
+    g.P1Win();
+    g.P1Win();
+
+    assertThat(g.getP1Score(), equalTo(4));
+
+  }
+
+
+
 
 }

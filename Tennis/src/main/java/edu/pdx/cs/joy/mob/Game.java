@@ -29,4 +29,10 @@ public class Game {
   public void P1Win() {
     p1Score++;
   }
+
+  public void P2Win() {
+    ++p2Score;
+  }
+
+
 }
