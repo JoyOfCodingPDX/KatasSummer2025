@@ -1,7 +1,5 @@
 package edu.pdx.cs.joy.mob;
 
-import com.google.common.annotations.VisibleForTesting;
-
 /**
  * A class for getting started with a code kata
  *
@@ -26,13 +24,21 @@ public class Game {
       return "Love-All";
     }
 
-  public void P1Win() {
-    p1Score++;
+  public void P1WinPoint() {
+    ++p1Score;
   }
 
-  public void P2Win() {
+  public void P2WinPoint() {
     ++p2Score;
   }
+
+public int getWinner(){
+    if(p1Score == 4){
+      return 1;
+    }
+    throw new UnsupportedOperationException("P1 won't be the winner");
+}
+
 
 
 }

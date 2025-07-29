@@ -1,6 +1,5 @@
 package edu.pdx.cs.joy.mob;
 
-import org.hamcrest.MatcherAssert;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -39,7 +38,7 @@ public class TennisTest
   @Test
   void incrPlayer1Score(){
     Game g = new Game();
-    g.P1Win();
+    g.P1WinPoint();
     assertThat(g.getP1Score(), equalTo(1));
     assertThat(g.getP2Score(), equalTo(0));
   }
@@ -47,7 +46,7 @@ public class TennisTest
   @Test
   void incrPlayer2Score() {
     Game g = new Game();
-    g.P2Win();
+    g.P2WinPoint();
     assertThat(g.getP1Score(), equalTo(0));
     assertThat(g.getP2Score(), equalTo(1));
   }
@@ -55,14 +54,17 @@ public class TennisTest
   @Test
   void player1WinsGame() {
     Game g = new Game();
-    g.P1Win();
-    g.P1Win();
-    g.P1Win();
-    g.P1Win();
+    g.P1WinPoint();
+    g.P1WinPoint();
+    g.P1WinPoint();
+    g.P1WinPoint();
 
     assertThat(g.getP1Score(), equalTo(4));
+    assertThat(g.getWinner(), equalTo(1));
 
   }
+
+
 
 
 
