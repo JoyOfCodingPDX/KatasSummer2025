@@ -1,18 +1,16 @@
-package edu.pdx.cs.joy.pair3;
+package edu.pdx.cs.joy.mob;
 
 import edu.pdx.cs.joy.InvokeMainTestCase;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.StringContains.containsString;
 
-class DiamondIT extends InvokeMainTestCase {
+class TennisIT extends InvokeMainTestCase {
 
-  @Disabled
   @Test
   void invokingMainWithNoArgumentsPrintsMissingArgumentsToStandardError() {
-    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class);
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Tennis.class);
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 

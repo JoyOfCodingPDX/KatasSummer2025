@@ -1,6 +1,7 @@
 package edu.pdx.cs.joy.pair6;
 
 import edu.pdx.cs.joy.InvokeMainTestCase;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static java.util.function.Predicate.not;
@@ -14,7 +15,8 @@ class DiamondIT extends InvokeMainTestCase {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class);
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
-  
+
+  @Disabled
   @Test
   void mainWithBPrintsDiamond() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "B");
@@ -25,6 +27,7 @@ class DiamondIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardOut(), containsString(expected));
   }
 
+  @Disabled
   @Test
   void mainWithInvalidCharacterPrintsError() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "1");

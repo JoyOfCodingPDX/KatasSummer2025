@@ -1,14 +1,13 @@
-package edu.pdx.cs.joy.pair15;
+package edu.pdx.cs.joy.mob;
 
 import org.junit.jupiter.api.Test;
 
-public class DiamondTest
+public class TennisTest
 {
 
   @Test
   void canInstantiateKataClass() {
-    new Diamond();
+    new Tennis();
   }
-
 
 }

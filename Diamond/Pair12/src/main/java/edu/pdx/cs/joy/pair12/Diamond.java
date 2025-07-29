@@ -25,31 +25,44 @@ public class Diamond {
     }
     char[] hold_end = args[0].toCharArray();
 
-    if(hold_end[0] < 60) {
-      hold_end[0] = (char)(hold_end[0] - '0');
+    if(hold_end[0] < 60 || hold_end[0] > 90) {
+      hold_end[0] = (char)(hold_end[0] - 32);
     }
 
     System.out.println((int) hold_end[0]);
 
     if(hold_end[0] >= 60 && hold_end[0] <= 90){
 
-      int hold_amount_sequence = (int) hold_end[0] - 65;
+      int hold_amount_sequence = (int) hold_end[0] - 65 + 1;
 
       int distance = hold_amount_sequence;
+      int distance_left = hold_amount_sequence;
+      int distance_right = hold_amount_sequence;
 
+      int count = 0;
 
       for(int i = 65; i <= (int) hold_end[0]; ++i){
 
         char to_letter = (char) i;
 
+
+
         if(i != 65) {
-          System.out.printf("%" + hold_amount_sequence + i + "s", "");
+          System.out.printf("%" + distance_left + "s", "");
           System.out.print(to_letter);
-          System.out.printf("%" + hold_amount_sequence + i + "s", "");
-          System.out.print(to_letter);
+          System.out.printf("%" + (distance_right - distance + count) + "s", "");
+
+          System.out.println(to_letter);
         }
-        else{
-          System.out.print(to_letter);
+        else if(i == 65) {
+          System.out.printf("%" + hold_amount_sequence + "s", "");
+          System.out.println(to_letter);
+        }
+
+        --distance_left;
+        ++distance_right;
+        if(i != 65) {
+          ++count;
         }
 
       }

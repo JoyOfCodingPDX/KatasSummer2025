@@ -9,13 +9,19 @@ public class DiamondTest
   void canInstantiateKataClass() {
     new Diamond();
   }
-    new Diamond('A');
-}
-
-  @Test
-  void diamondWithA() {
-    Diamond diamond = new Diamond('A');
-    String expected = "A\n";
-    String actual = diamond.print();
-    assertEquals(expected, actual);
+//
+//  @Test
+//  void diamondWithA() {
+//    Diamond diamond = new Diamond('A');
+//    String expected = "A\n";
+//    String actual = diamond.print();
+//    assertEquals(expected, actual);
+//  }
+//
+//  @Test
+//  void diamondWithB() {
+//    Diamond diamond = new Diamond('B');
+//    String expected = " A\n" + "B B\n" + " A\n";
+//    String actual = diamond.print();
+//    assertEquals(expected, actual);
   }

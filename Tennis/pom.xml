@@ -3,16 +3,16 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>edu.pdx.cs.joy.katas</groupId>
-    <artifactId>DiamondKatas</artifactId>
+    <artifactId>KatasSummer2025</artifactId>
     <version>1.0.0</version>
   </parent>
-  <groupId>edu.pdx.cs.joy.pair13</groupId>
-  <artifactId>Diamond</artifactId>
+  <groupId>edu.pdx.cs.joy.mob</groupId>
+  <artifactId>Tennis</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>Diamond Pair 13</name>
-  <description>Diamond Kata</description>
+  <name>Tennis Kata</name>
+  <description>Mob Programming on the Tennis Kata</description>
   <url>http://www.cs.pdx.edu</url>
 
   <properties>
@@ -21,10 +21,28 @@
 
   <developers>
     <developer>
-      <name>Gil Tighe</name>
+      <name>David Whitlock</name>
+      <roles>
+        <role>facilitator</role>
+      </roles>
     </developer>
     <developer>
-      <name>Sawyer King</name>
+      <name>Mobber 1</name>
+    </developer>
+    <developer>
+      <name>Mobber 2</name>
+    </developer>
+    <developer>
+      <name>Mobber 3</name>
+    </developer>
+    <developer>
+      <name>Mobber 4</name>
+    </developer>
+    <developer>
+      <name>Mobber 5</name>
+    </developer>
+    <developer>
+      <name>Mobber 6</name>
     </developer>
   </developers>
 
@@ -37,7 +55,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.pair13.Diamond</mainClass>
+              <mainClass>edu.pdx.cs.joy.mob.Tennis</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -73,25 +91,25 @@
     </plugins>
   </build>
 
-  <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-report-plugin</artifactId>
-        <version>${maven-surefire-report-plugin.version}</version>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>${maven-checkstyle-plugin.version}</version>
-      </plugin>
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <version>${jacoco-maven-plugin.version}</version>
-      </plugin>
-    </plugins>
-  </reporting>
+    <reporting>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-report-plugin</artifactId>
+          <version>${maven-surefire-report-plugin.version}</version>
+        </plugin>
+         <plugin>
+           <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-checkstyle-plugin</artifactId>
+           <version>${maven-checkstyle-plugin.version}</version>
+         </plugin>
+        <plugin>
+          <groupId>org.jacoco</groupId>
+          <artifactId>jacoco-maven-plugin</artifactId>
+          <version>${jacoco-maven-plugin.version}</version>
+        </plugin>
+      </plugins>
+    </reporting>
 
   <dependencies>
     <dependency>
