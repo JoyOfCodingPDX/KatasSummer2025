@@ -21,4 +21,12 @@ public class Game {
     return p2Score;
   }
 
+  @Override
+    public String toString() {
+      return "Love-All";
+    }
+
+  public void P1Win() {
+    p1Score++;
+  }
 }
