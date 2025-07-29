@@ -52,7 +52,7 @@ public class TennisTest
   }
 
   @Test
-  void player1WinsGame() {
+  void player1WinsGame_p2ZeroPoints() {
     Game g = new Game();
     g.P1WinPoint();
     g.P1WinPoint();
@@ -60,8 +60,30 @@ public class TennisTest
     g.P1WinPoint();
 
     assertThat(g.getP1Score(), equalTo(4));
-    assertThat(g.getWinner(), equalTo(1));
+    assertThat(g.checkWinner(), equalTo(1));
 
+  }
+
+  @Test
+  void player2WinsGame_p1ZeroPoints() {
+    Game g = new Game();
+    g.P2WinPoint();
+    g.P2WinPoint();
+    g.P2WinPoint();
+    g.P2WinPoint();
+
+    assertThat(g.getP2Score(), equalTo(4));
+    assertThat(g.checkWinner(), equalTo(2));
+
+  }
+
+  @Test
+  void noWinner(){
+    Game g = new Game();
+    assertThat(g.getP1Score(), equalTo(0));
+    assertThat(g.getP2Score(), equalTo(0));
+
+    assertThat(g.checkWinner(), equalTo(0));
   }
 
 

@@ -32,11 +32,17 @@ public class Game {
     ++p2Score;
   }
 
-public int getWinner(){
+public int checkWinner(){
     if(p1Score == 4){
       return 1;
     }
-    throw new UnsupportedOperationException("P1 won't be the winner");
+
+    if(p2Score == 4){
+      return 2;
+    }
+
+    return 0;
+    //throw new UnsupportedOperationException("P1 won't be the winner");
 }
 
 
