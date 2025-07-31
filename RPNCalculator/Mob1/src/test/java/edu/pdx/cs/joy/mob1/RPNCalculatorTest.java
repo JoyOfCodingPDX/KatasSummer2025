@@ -15,7 +15,7 @@ public class RPNCalculatorTest {
   @Test
   void additionTest() {
     RPNCalculator rpn = new RPNCalculator();
-    int result = rpn.evaluate("20 5 +");
+    int result = rpn.evaluate(new String[] {"20","5","+"});
     assertThat(result, equalTo(25));
   }
 
@@ -40,11 +40,8 @@ public class RPNCalculatorTest {
     assertThat(result, equalTo(4));
   }
 
-  @Test
-  void TooFewArguments(){
-    RPNCalculator rpn = new RPNCalculator();
-    int result = rpn.evaluate("20");
-    assertThat(result., equalTo(0));
 
-  }
+
+
+
 }
