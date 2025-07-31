@@ -18,6 +18,13 @@ public class RPNCalculator {
   @VisibleForTesting
   public static void main(String[] args) {
 
+    String userInput = String.join(" ", args);
+      try {
+          System..println(calculate(userInput));
+      } catch (Exception e) {
+          throw new RuntimeException(e);
+      }
+
   }
 
 
@@ -80,4 +87,7 @@ public class RPNCalculator {
       return false;
     }
   }
+
+
+
 }
