@@ -20,6 +20,12 @@ public class RPNCalculatorTest
   }
 
   @Test
+  void multipleDigitDivision() {
+    //    20 5 2 / /
+    assertThat(RPNCalculator.calculate("20 5 2 / /"), equalTo(8.0F));
+  }
+
+  @Test
   void testIsDigitTrue() {
     assertThat(RPNCalculator.isDigit("20"), equalTo(true));
   }
