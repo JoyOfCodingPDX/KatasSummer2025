@@ -12,8 +12,27 @@ public class RPNCalculator {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
-    String[] operators = argsplit(" ");
+
+    RPNCalculator calculator = new RPNCalculator();
+
+    //double check one string on command line
+    if (args.length < 1) {
+      System.err.println("Missing command line arguments");
+      return;
+    }
+    else if (args.length > 1 ) {
+      System.err.println("Too many command line arguments");
+      return;
+    }
+    //if one string passes check, parse here:
+    String[] operators = args[0].split(" ");
+    if (operators.length != 3) {
+      System.err.println("Not enough operands/operators for RPNCalculator");
+      return;
+    }
+
+    // now, EVALUATE !!!
+    System.out.println(calculator.evaluate(operators));
 
   }
 
