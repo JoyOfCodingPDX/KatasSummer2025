@@ -20,15 +20,16 @@ public class RPNCalculator {
 
     String userInput = String.join(" ", args);
       try {
-          System..println(calculate(userInput));
+          System.out.println(calculate(userInput));
       } catch (Exception e) {
-          throw new RuntimeException(e);
+          System.err.println("Error: " + e.getMessage());
       }
 
   }
 
 
   public static float calculate(String s) {
+
     String[] parts = s.split(" ");
 
     Stack<Float> numbers = new Stack<>();
@@ -37,6 +38,9 @@ public class RPNCalculator {
       if (isDigit(part)) {
         numbers.push(Float.parseFloat(part));
       } else {
+        if (numbers.size() <2 && !part.equals("SQRT") && !part.equals("MAX")) {
+          throw new ArithmeticException("Error: Insufficient operands for operation '" + part + "'");
+        }
         switch (part) {
           case  "/":
             float num1 = numbers.pop();
