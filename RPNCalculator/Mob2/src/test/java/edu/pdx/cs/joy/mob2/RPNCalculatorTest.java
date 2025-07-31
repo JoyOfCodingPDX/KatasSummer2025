@@ -16,10 +16,19 @@ public class RPNCalculatorTest
   @Test
   void firstRPNSample() {
     //    20 5 /
+    assertThat(RPNCalculator.calculate("20 5 /"), equalTo(4.0F));
+  }
 
+  @Test
+  void multipleDigitDivision() {
+    //    20 5 2 / /
+    assertThat(RPNCalculator.calculate("20 5 2 / /"), equalTo(8.0F));
+  }
 
-    assertThat(RPNCalculator.calculate("20 5 /"), equalTo(4));
-
+  @Test
+  void simpleAdditionTest() {
+    //    4 2 +
+    assertThat(RPNCalculator.calculate("4 2 +"), equalTo(6.0F));
   }
 
   @Test
