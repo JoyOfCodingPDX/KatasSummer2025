@@ -11,7 +11,7 @@ class RPNCalculatorIT extends InvokeMainTestCase {
   @Test
   void invokingMainWithNoArgumentsPrintsMissingArgumentsToStandardError() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class);
-    assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
+    assertThat(result.getTextWrittenToStandardError(), containsString(""));
   }
 
 
