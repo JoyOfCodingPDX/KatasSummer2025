@@ -19,7 +19,7 @@ class RPNCalculatorIT extends InvokeMainTestCase {
   @Test
   void TooFewArguments() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "6");
-    assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
+    assertThat(result.getTextWrittenToStandardError(), containsString("Not enough operands/operators for RPNCalculator"));
   }
 
 }
