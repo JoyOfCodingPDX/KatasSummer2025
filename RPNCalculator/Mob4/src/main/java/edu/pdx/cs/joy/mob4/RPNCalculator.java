@@ -11,6 +11,11 @@ import java.util.Stack;
  * class (and its tests).
  */
 public class RPNCalculator {
+  public Stack<Double> numberStack = new Stack<>();
 
+  public Double evaluate(String args[]){
+    numberStack.push(Double.parseDouble(args[0]));
+    return numberStack.pop();
   }
+
 }
