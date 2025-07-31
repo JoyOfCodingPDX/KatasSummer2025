@@ -34,6 +34,12 @@ public class RPNCalculator {
             float num1 = numbers.pop();
             float num2 = numbers.pop();
             numbers.push(num2/num1);
+            break;
+          case  "+":
+            num1 = numbers.pop();
+            num2 = numbers.pop();
+            numbers.push(num2 + num1);
+            break;
         }
       }
     }

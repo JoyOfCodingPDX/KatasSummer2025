@@ -26,6 +26,12 @@ public class RPNCalculatorTest
   }
 
   @Test
+  void simpleAdditionTest() {
+    //    4 2 +
+    assertThat(RPNCalculator.calculate("4 2 +"), equalTo(6.0F));
+  }
+
+  @Test
   void testIsDigitTrue() {
     assertThat(RPNCalculator.isDigit("20"), equalTo(true));
   }
