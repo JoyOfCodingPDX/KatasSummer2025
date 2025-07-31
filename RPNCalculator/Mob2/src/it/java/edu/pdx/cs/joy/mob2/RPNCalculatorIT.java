@@ -31,7 +31,7 @@ class RPNCalculatorIT extends InvokeMainTestCase {
     InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "/");
     assertThat(result.getTextWrittenToStandardError(), containsString("Error: Insufficient operands for operation '/'"));
   }
-   @Test
+   @Testgit
   void moreOperatorsThanOperands() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "20 5 / +");
     assertThat(result.getTextWrittenToStandardError(), containsString("Error: Insufficient operands for operation '+'"));
