@@ -13,10 +13,16 @@ public class RPNCalculator {
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
+    String[] operators = argsplit(" ");
+
   }
 
-  public int evaluate(String arg) {
-    String[] operators = arg.split(" ");
+
+
+
+
+
+  public int evaluate(String [] operators) {
     return switch (operators[2]) {
       case "+" -> Integer.parseInt(operators[0]) + Integer.parseInt(operators[1]);
       case "-" -> Integer.parseInt(operators[0]) - Integer.parseInt(operators[1]);

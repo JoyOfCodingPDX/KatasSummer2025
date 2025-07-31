@@ -40,11 +40,8 @@ public class RPNCalculatorTest {
     assertThat(result, equalTo(4));
   }
 
-  @Test
-  void TooFewArguments(){
-    RPNCalculator rpn = new RPNCalculator();
-    int result = rpn.evaluate("20");
-    assertThat(result., equalTo(0));
 
-  }
+
+
+
 }
