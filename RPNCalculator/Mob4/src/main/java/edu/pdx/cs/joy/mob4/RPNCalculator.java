@@ -15,14 +15,14 @@ public class RPNCalculator {
 
     public Double addition(Double firstNumber, Double secondNumber) {
 
-        System.out.println("Addition " + firstNumber + " and " + secondNumber + "Total: " + (firstNumber + secondNumber));
+        System.out.println("Addition " + firstNumber + " and " + secondNumber + " Total: " + (firstNumber + secondNumber));
 
         return firstNumber + secondNumber;
     }
 
     public Double subtraction(Double firstNumber, Double secondNumber) {
 
-        System.out.println("Subtraction " + firstNumber + " and " + secondNumber + "Total: " + (firstNumber - secondNumber));
+        System.out.println("Subtraction " + firstNumber + " and " + secondNumber + " Total: " + (firstNumber - secondNumber));
 
         return firstNumber - secondNumber;
     }
