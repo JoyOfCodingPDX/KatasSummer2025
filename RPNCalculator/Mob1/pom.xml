@@ -33,7 +33,7 @@
       <name>Mobber 4</name>
     </developer>
     <developer>
-      <name>Mobber 5</name>
+      <name>Nicholas Schexnayder</name>
     </developer>
     <developer>
       <name>Mobber 6</name>
@@ -55,7 +55,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.mob1.Minesweeper</mainClass>
+              <mainClass>edu.pdx.cs.joy.mob1.RPNCalculator</mainClass>
             </manifest>
           </archive>
         </configuration>

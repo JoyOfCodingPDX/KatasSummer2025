@@ -1,4 +1,4 @@
-package edu.pdx.cs.joy.mob3;
+package edu.pdx.cs.joy.mob4;
 
 import com.google.common.annotations.VisibleForTesting;
 
@@ -8,7 +8,7 @@ import com.google.common.annotations.VisibleForTesting;
  * Use IntelliJ's "Refactor | Rename..." command to change the name of this
  * class (and its tests).
  */
-public class Minesweeper {
+public class RPNCalculator {
 
   @VisibleForTesting
   public static void main(String[] args) {
