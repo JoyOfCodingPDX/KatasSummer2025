@@ -14,5 +14,18 @@ class RPNCalculatorIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString(""));
   }
 
+  @Test
+  void invokeMainWithArguments() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "20 5 /");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("4.0"));
+  }
+
+
+  @Test
+  void invokeMainWithZero() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "20 0 /");
+    assertThat(result.getTextWrittenToStandardError(), containsString("Division by zero is not allowed"));
+  }
+
 
 }

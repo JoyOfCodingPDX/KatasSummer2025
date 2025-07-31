@@ -15,7 +15,29 @@ public class RPNCalculator {
 
     public Double addition(Double firstNumber, Double secondNumber) {
 
+        System.out.println("Addition " + firstNumber + " and " + secondNumber + "Total: " + (firstNumber + secondNumber));
+
         return firstNumber + secondNumber;
+    }
+
+    public Double subtraction(Double firstNumber, Double secondNumber) {
+
+        System.out.println("Subtraction " + firstNumber + " and " + secondNumber + "Total: " + (firstNumber - secondNumber));
+
+        return firstNumber - secondNumber;
+    }
+
+    public Double multiplication(Double firstNumber, Double secondNumber) {
+
+        System.out.println("Multiplication " + firstNumber + " and " + secondNumber + "Total: " + (firstNumber * secondNumber));
+        return firstNumber * secondNumber;
+    }
+
+    public Double division(Double firstNumber, Double secondNumber) {
+
+        System.out.println("Division " + firstNumber + " and " + secondNumber + "Total: " + (firstNumber / secondNumber));
+
+        return firstNumber / secondNumber;
     }
 
     public static void main(String[] args) {
@@ -28,6 +50,21 @@ public class RPNCalculator {
                     calculator.numberStack.push(
                             calculator.addition(calculator.numberStack.pop(), calculator.numberStack.pop()));
                     break;
+
+                case "-":
+                    calculator.numberStack.push(
+                            calculator.subtraction(calculator.numberStack.pop(), calculator.numberStack.pop()));
+                    break;
+
+                case "*":
+                    calculator.numberStack.push(
+                            calculator.multiplication(calculator.numberStack.pop(), calculator.numberStack.pop()));
+                    break;
+
+                case "/":
+                    calculator.numberStack.push(
+                            calculator.division(calculator.numberStack.pop(), calculator.numberStack.pop()));
+
                 default:
                     try {
                         // Try to parse the argument as a number
@@ -39,7 +76,5 @@ public class RPNCalculator {
             }
         }
     }
-
-}
 
 }
