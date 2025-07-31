@@ -55,7 +55,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.mob1.Minesweeper</mainClass>
+              <mainClass>edu.pdx.cs.joy.mob1.RPNCalculator</mainClass>
             </manifest>
           </archive>
         </configuration>

@@ -1,13 +1,13 @@
-package edu.pdx.cs.joy.mob3;
+package edu.pdx.cs.joy.mob2;
 
 import org.junit.jupiter.api.Test;
 
-public class MinesweeperTest
+public class RPNCalculatorTest
 {
 
   @Test
   void canInstantiateKataClass() {
-    new Minesweeper();
+    new RPNCalculator();
   }
 
 }
