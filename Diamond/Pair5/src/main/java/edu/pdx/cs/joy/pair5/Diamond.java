@@ -14,4 +14,18 @@ public class Diamond {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+//public String print() {
+//  List<Character> letters = buildAlphabetRange('A', character);
+//  StringBuilder sb = new StringBuilder();
+//
+//  for (int i = 0; i < letter.size(); i++) {
+//    sb.append(buildLine(letters, i));
+//  }
+//
+//  for (int i = letter.size() - 2; i >= 0; i--) {
+//    sb.append(buildLine(letters, i));
+//  }
+//
+//  return sb.toString();
 }
