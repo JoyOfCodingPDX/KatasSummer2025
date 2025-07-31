@@ -14,5 +14,11 @@ class RPNCalculatorIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString(""));
   }
 
+  @Test
+  void invokeMainWithArguments() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "20 5 /");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("4.0"));
+  }
+
 
 }

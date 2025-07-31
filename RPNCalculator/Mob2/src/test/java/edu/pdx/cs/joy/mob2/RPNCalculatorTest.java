@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class RPNCalculatorTest
 {
@@ -17,6 +18,12 @@ public class RPNCalculatorTest
   void firstRPNSample() {
     //    20 5 /
     assertThat(RPNCalculator.calculate("20 5 /"), equalTo(4.0F));
+  }
+
+  @Test
+  void firstRPNSampleDiv0() {
+    //    20 5 /
+    assertThrows(ArithmeticException.class, () -> RPNCalculator.calculate("20 0 /"));
   }
 
   @Test
