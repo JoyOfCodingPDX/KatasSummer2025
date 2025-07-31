@@ -21,7 +21,7 @@
 
   <developers>
     <developer>
-      <name>Mobber 1</name>
+      <name>Sam Burich</name>
     </developer>
     <developer>
       <name>Mobber 2</name>
@@ -55,7 +55,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.mob1.Minesweeper</mainClass>
+              <mainClass>edu.pdx.cs.joy.mob1.RPNCalculator</mainClass>
             </manifest>
           </archive>
         </configuration>
