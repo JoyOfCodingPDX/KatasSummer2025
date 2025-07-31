@@ -16,10 +16,7 @@ public class RPNCalculatorTest
   @Test
   void firstRPNSample() {
     //    20 5 /
-
-
-    assertThat(RPNCalculator.calculate("20 5 /"), equalTo(4));
-
+    assertThat(RPNCalculator.calculate("20 5 /"), equalTo(4.0F));
   }
 
   @Test

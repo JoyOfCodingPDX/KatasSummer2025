@@ -26,11 +26,19 @@ public class RPNCalculator {
     Stack<Float> numbers = new Stack<>();
 
     for (String part : parts) {
-      //if ()
-        //isDigit()
+      if (isDigit(part)) {
+        numbers.push(Float.parseFloat(part));
+      } else {
+        switch (part) {
+          case  "/":
+            float num1 = numbers.pop();
+            float num2 = numbers.pop();
+            numbers.push(num2/num1);
+        }
+      }
     }
 
-    return 0;
+    return numbers.pop();
   }
 
   public static boolean isDigit(String s) {
