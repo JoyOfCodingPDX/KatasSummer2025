@@ -2,6 +2,8 @@ package edu.pdx.cs.joy.mob4;
 
 import com.google.common.annotations.VisibleForTesting;
 
+import java.util.Stack;
+
 /**
  * A class for getting started with a code kata
  *
@@ -10,8 +12,5 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class RPNCalculator {
 
-  @VisibleForTesting
-  public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
   }
 }

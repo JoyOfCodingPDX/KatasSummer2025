@@ -14,4 +14,13 @@ public class RPNCalculator {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public int evaluate(String arg) {
+    String[] operators = arg.split(" ");
+    if(operators[2].equals("+")) {
+      return Integer.parseInt(operators[1]) + Integer.parseInt(operators[0]);
+    } else {
+      return 0;
+    }
+  }
 }
