@@ -32,6 +32,36 @@ public class RPNCalculatorTest
   }
 
   @Test
+  void simpleAdditionMinusTest() {
+    //    4 2 + 3 -
+    assertThat(RPNCalculator.calculate("4 2 + 3 -"), equalTo(3.0F));
+  }
+
+  @Test
+  void complexArithmeticTest() {
+    //    4 2 + 3 -
+    assertThat(RPNCalculator.calculate("3 5 8 * 7 + *"), equalTo(141.0F));
+  }
+
+  @Test
+  void testSQRT() {
+    //    4 2 + 3 -
+    assertThat(RPNCalculator.calculate("4 SQRT"), equalTo(2.0F));
+  }
+
+  @Test
+  void testMAXsimple() {
+    //    4 2 + 3 -
+    assertThat(RPNCalculator.calculate("4 MAX"), equalTo(4.0F));
+  }
+
+  @Test
+  void testMAXcomplex() {
+    //    4 2 + 3 -
+    assertThat(RPNCalculator.calculate("5 3 4 2 9 1 MAX 1 +"), equalTo(10.0F));
+  }
+
+  @Test
   void testIsDigitTrue() {
     assertThat(RPNCalculator.isDigit("20"), equalTo(true));
   }
