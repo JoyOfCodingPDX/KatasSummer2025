@@ -44,7 +44,7 @@ public class RPNCalculatorTest {
   @Test
   void BadDataTest() {
       RPNCalculator rpn = new RPNCalculator();
-      assertThrows(Exception.class, rpn::evaluate(new String [] {"","",""}));
+      assertThrows(Exception.class, () -> rpn.evaluate(new String [] {"","","+"}));
     }
   }
 

@@ -22,4 +22,10 @@ class RPNCalculatorIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Not enough operands/operators for RPNCalculator"));
   }
 
+    @Test
+    void BadData() {
+        InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "f 7 +");
+        assertThat(result.getTextWrittenToStandardError(), containsString("first operand is not a number"));
+    }
 }
+
