@@ -22,6 +22,16 @@ public class RPNCalculatorTest
 
   }
 
+  @Test
+  void testIsDigitTrue() {
+    assertThat(RPNCalculator.isDigit("20"), equalTo(true));
+  }
+
+  @Test
+  void testIsDigitFalse() {
+    assertThat(RPNCalculator.isDigit("HI"), equalTo(false));
+  }
+
 
 
 }

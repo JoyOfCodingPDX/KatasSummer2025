@@ -26,10 +26,19 @@ public class RPNCalculator {
     Stack<Float> numbers = new Stack<>();
 
     for (String part : parts) {
-      if ()
-        isDigit()
+      //if ()
+        //isDigit()
     }
 
+    return 0;
+  }
 
+  public static boolean isDigit(String s) {
+    try {
+      int n = Integer.parseInt(s);
+      return true;
+    } catch (NumberFormatException e) {
+      return false;
+    }
   }
 }
