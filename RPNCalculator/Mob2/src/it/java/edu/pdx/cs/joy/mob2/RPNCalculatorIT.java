@@ -31,11 +31,31 @@ class RPNCalculatorIT extends InvokeMainTestCase {
     InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "/");
     assertThat(result.getTextWrittenToStandardError(), containsString("Error: Insufficient operands for operation '/'"));
   }
-   @Testgit
+   @Test
   void moreOperatorsThanOperands() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "20 5 / +");
     assertThat(result.getTextWrittenToStandardError(), containsString("Error: Insufficient operands for operation '+'"));
   }
 
+  @Test
+  void noArgsPassedIn()
+  {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "");
+    assertThat(result.getTextWrittenToStandardError(), containsString("Error"));
+
+  }
+
+  @Test
+  void justDigitsPassedIn()
+  {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "3 4 5 6 7 8");
+    assertThat(result.getTextWrittenToStandardError(), containsString("Error"));
+  }
+  @Test
+  void somethingRandomInStream()
+  {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "Hi Everyone");
+    assertThat(result.getTextWrittenToStandardError(), containsString("Error"));
+  }
 
 }

@@ -39,7 +39,7 @@ public class RPNCalculator {
         numbers.push(Float.parseFloat(part));
       } else {
         if (numbers.size() <2 && !part.equals("SQRT") && !part.equals("MAX")) {
-          throw new ArithmeticException("Error: Insufficient operands for operation '" + part + "'");
+          throw new ArithmeticException("Insufficient operands for operation '" + part + "'");
         }
         switch (part) {
           case  "/":
@@ -79,7 +79,9 @@ public class RPNCalculator {
         }
       }
     }
-
+    if(numbers.size() != 1){
+      throw new RuntimeException("Too many digits :(");
+    }
     return numbers.pop();
   }
 
