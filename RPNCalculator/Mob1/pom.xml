@@ -27,19 +27,19 @@
       <name>Kyle Wilson</name>
     </developer>
     <developer>
-      <name>Mobber 3</name>
+      <name>Sheraz Ahmed</name>
     </developer>
     <developer>
-      <name>Mobber 4</name>
+      <name>Tanya Konyukhova</name>
     </developer>
     <developer>
       <name>Nicholas Schexnayder</name>
     </developer>
     <developer>
-      <name>Mobber 6</name>
+      <name>Chih-YU Tsai</name>
     </developer>
     <developer>
-      <name>Mobber 7</name>
+      <name>Layaal Khellah</name>
     </developer>
     <developer>
       <name>Mobber 8</name>
@@ -55,7 +55,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.mob1.RPNCalculator</mainClass>
+              <mainClass>edu.pdx.cs.joy.mob1.Minesweeper</mainClass>
             </manifest>
           </archive>
         </configuration>
