@@ -15,7 +15,7 @@ public class RPNCalculatorTest
   @Test
   void evaluatesaddition(){
     RPNCalculator calc=new RPNCalculator();
-    //assertEquals(7.0,calc.evaluate("3 4 +"));
+    assertEquals(7.0,calc.addition(new String[]{"3", "4", "+"}));
   }
 
   @Test
