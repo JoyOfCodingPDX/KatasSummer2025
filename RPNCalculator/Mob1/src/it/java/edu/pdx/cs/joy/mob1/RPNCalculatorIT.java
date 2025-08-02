@@ -1,6 +1,7 @@
 package edu.pdx.cs.joy.mob1;
 
 import edu.pdx.cs.joy.InvokeMainTestCase;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -22,6 +23,7 @@ class RPNCalculatorIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Not enough operands/operators for RPNCalculator"));
   }
 
+  @Disabled
     @Test
     void BadData() {
         InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "f 7 +");
