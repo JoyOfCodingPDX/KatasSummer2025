@@ -21,9 +21,9 @@ public class Diamond {
       return;
     }
 
-    System.out.println(generateDiamond(end)); // Create and Implement Generate Diamond
-
-    public static
+//    System.out.println(generateDiamond(end)); // Create and Implement Generate Diamond
+//
+//    public static
   }
 
 }
