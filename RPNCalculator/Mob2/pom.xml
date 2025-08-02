@@ -21,28 +21,28 @@
 
   <developers>
     <developer>
-      <name>Mobber 1</name>
+      <name>Juyoung Park</name>
     </developer>
     <developer>
-      <name>Mobber 2</name>
+      <name>Simrah Saleem</name>
     </developer>
     <developer>
-      <name>Mobber 3</name>
+      <name>Marko Markoc</name>
     </developer>
     <developer>
-      <name>Mobber 4</name>
+      <name>Jacob Purvis</name>
     </developer>
     <developer>
-      <name>Mobber 5</name>
+      <name>Denny Garcia Joya</name>
     </developer>
     <developer>
-      <name>Mobber 6</name>
+      <name>Gil Tighe</name>
     </developer>
     <developer>
-      <name>Mobber 7</name>
+      <name>Ryan Le</name>
     </developer>
     <developer>
-      <name>Mobber 8</name>
+      <name>Marchelle Le</name>
     </developer>
   </developers>
 
@@ -55,7 +55,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.mob2.Minesweeper</mainClass>
+              <mainClass>edu.pdx.cs.joy.mob2.RPNCalculator</mainClass>
             </manifest>
           </archive>
         </configuration>
