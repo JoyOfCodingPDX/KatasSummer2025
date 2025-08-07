@@ -14,7 +14,7 @@ public class MinesweeperTest
   }
 
   @Test
-  void addtestlinestorescharactercorrectly(){
+  void addtestlinestorescharactercorrectl(){
     Minesweeper game = new Minesweeper(2,4);
 
     game.addLine("*..*");
