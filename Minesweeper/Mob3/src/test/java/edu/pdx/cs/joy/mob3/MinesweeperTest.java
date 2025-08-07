@@ -27,6 +27,18 @@ public class MinesweeperTest
     assertThat(game.board[3][3], equalTo('.'));
   }
 
+  @Test
+  void testMinePlacement() {
+    Minesweeper game = new Minesweeper();
+
+    int m = 4;
+    int n = 4;
+    game.createBoard(m, n);
+    game.placeMine(2, 3);
+    assertThat(game.board[2][3], equalTo('*'));
+
+
+  }
 
 
 

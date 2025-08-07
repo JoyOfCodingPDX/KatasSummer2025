@@ -42,4 +42,15 @@ public class MinesweeperTest
     assertThat(game.getColCount(), equalTo(4));
   }
 
+ @Test
+  void checkForMines(){
+    String input = "4 4\n" +
+            "*...\n" +
+            "....\n" +
+            ".*..\n" +
+            "....";
+    Minesweeper game = new Minesweeper(input);
+    assertThat(game.getBoard(0), equalTo("* 1 0 0"));
+  }
+
 }

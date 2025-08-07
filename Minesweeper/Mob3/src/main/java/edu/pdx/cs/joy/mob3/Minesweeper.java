@@ -13,11 +13,15 @@ import java.util.ArrayList;
 public class Minesweeper {
 
 
-  public static char[][] board;
+  public char[][] board;
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    //System.err.println("Missing command line arguments");
+
+    String m = args[0];
+    String n = args[1];
+
   }
 
   public void showBoard() {
@@ -39,4 +43,12 @@ public class Minesweeper {
     }
 
   }
+
+  public void placeMine(int y, int x) {
+    if (y <= board.length  && x <= board[0].length && x >= 0 && y >= 0 ) {
+      board[y][x] = '*';
+    };
+  }
+
+
 }
