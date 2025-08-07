@@ -34,6 +34,8 @@ public class MinesweeperTest
     int m = 4;
     int n = 4;
     game.createBoard(m, n);
+    game.placeMine(2, 3);
+    assertThat(game.board[2][3], equalTo('*'));
 
 
   }
