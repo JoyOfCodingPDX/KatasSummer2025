@@ -12,6 +12,10 @@ public class Minesweeper {
 
   @VisibleForTesting
   public static void main(String[] args) {
+
     System.err.println("Missing command line arguments");
+  }
+
+  public void addLine(String s) {
   }
 }
