@@ -52,15 +52,70 @@ public class Minesweeper {
     
   }
   
-  public void getClues(int y, int x) {
-    if (isValidIndex(y, x)) {
+  public int getClues(int y, int x) {
 
+    int total = 0;
+
+    if (!isValidIndex(y, x)) {
+      return 0;
     }
+    if(isValidIndex(y, x+1)){
+      if(board[y][x+1] == '*') {
+        total++;
+      }
+    }
+
+    if(isValidIndex(y-1, x+1)){
+      if(board[y-1][x+1] == '*') {
+        total++;
+      }
+    }
+
+    if(isValidIndex(y-1, x)){
+      if(board[y-1][x] == '*') {
+        total++;
+      }
+    }
+
+    if(isValidIndex(y-1, x-1)){
+      if(board[y-1][x-1] == '*') {
+        total++;
+      }
+    }
+
+    if(isValidIndex(y, x-1)){
+      if(board[y][x-1] == '*') {
+        total++;
+      }
+    }
+
+    if(isValidIndex(y+1, x-1)){
+      if(board[y+1][x-1] == '*') {
+        total++;
+      }
+    }
+
+    if(isValidIndex(y+1, x)){
+      if(board[y+1][x] == '*') {
+        total++;
+      }
+    }
+
+    if(isValidIndex(y+1, x+1)){
+      if(board[y-1][x+1] == '*') {
+        total++;
+      }
+    }
+
+
+    System.out.println(total);
+    return total;
+
 
   }
 
-  private boolean isValidIndex(int y, int x) {
-    return y <= board.length && x <= board[0].length && x >= 0 && y >= 0;
+  public boolean isValidIndex(int y, int x) {
+    return (x >= 0 && y >= 0 && y < board.length && x < board[0].length);
   }
 
 
