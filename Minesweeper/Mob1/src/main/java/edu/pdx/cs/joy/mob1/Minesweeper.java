@@ -13,7 +13,7 @@ public class Minesweeper {
   @VisibleForTesting
   public static void main(String[] args) {
     if (args.length < 2) {
-      System.err.println("Missing command line arguments");
+      throw new IllegalArgumentException("Missing command line arguments");
       return;
     }
 
