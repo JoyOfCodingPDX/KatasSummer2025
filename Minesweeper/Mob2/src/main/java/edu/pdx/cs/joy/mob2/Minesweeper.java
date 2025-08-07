@@ -10,8 +10,23 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Minesweeper {
 
+  public char[][] minefield;
+  public int row;
+  public int col;
+
+  public Minesweeper(int row, int col) {
+    this.row = row;
+    this.col = col;
+    this.minefield = new char[row][col];
+  }
+
+
   @VisibleForTesting
   public static void main(String[] args) {
+
     System.err.println("Missing command line arguments");
+  }
+
+  public void addLine(String s) {
   }
 }
