@@ -42,4 +42,9 @@ public class MinesweeperTest
     assertThat(game.getColCount(), equalTo(4));
   }
 
+//  @Test
+//  void checkForMines(){
+//
+//  }
+
 }
