@@ -51,6 +51,26 @@ public class MinesweeperTest
             "....";
     Minesweeper game = new Minesweeper(input);
     assertThat(game.getBoard(0), equalTo("* 1 0 0"));
+    assertThat(game.getBoard(1), equalTo("2 2 1 0"));
+    assertThat(game.getBoard(2), equalTo("1 * 1 0"));
+    assertThat(game.getBoard(3), equalTo("1 1 1 0"));
   }
+
+  @Test
+  void checkForFirstMine(){
+    String input = "4 4\n" +
+            "*...\n" +
+            "....\n" +
+            ".*..\n" +
+            "....";
+    String[] inputArray = input.split("\n");
+    Minesweeper game = new Minesweeper(input);
+    assertThat(game.checkMine(inputArray), equalTo("* 1 . ."));
+//    assertThat(game.getBoard(1), equalTo("1 . . ."));
+//    assertThat(game.getBoard(2), equalTo(". * . ."));
+//    assertThat(game.getBoard(3), equalTo(". . . ."));
+
+  }
+
 
 }
