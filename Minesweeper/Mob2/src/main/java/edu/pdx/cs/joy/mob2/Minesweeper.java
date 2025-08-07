@@ -10,6 +10,16 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Minesweeper {
 
+  public char[][] minefield;
+  public int row;
+  public int col;
+
+  public Minesweeper(int row, int col) {
+    this.row = row;
+    this.col = col;
+  }
+
+
   @VisibleForTesting
   public static void main(String[] args) {
 
@@ -17,5 +27,14 @@ public class Minesweeper {
   }
 
   public void addLine(String s) {
+    if (minefield == null) {
+      minefield = new char[row][col];
+    }
+    if (s.length() != col) {
+      throw new IllegalArgumentException("Line length does not match column size");
+    }
+    for (int i = 0; i < col; i++) {
+      minefield[0][i] = s.charAt(i);
+    }
   }
 }
