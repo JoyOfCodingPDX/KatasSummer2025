@@ -14,7 +14,6 @@ public class Minesweeper {
   public static void main(String[] args) {
     if (args.length < 2) {
       throw new IllegalArgumentException("Missing command line arguments");
-      return;
     }
 
     int rows = Integer.parseInt(args[0]);
@@ -33,3 +32,8 @@ public class Minesweeper {
 
 }
 
+public static char[][] buildGrid(char[][]grid){
+  int rows = grid.length;
+  int columns = grid[0].length;
+  char[][] newGrid = new char[rows][columns];
+}
