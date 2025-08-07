@@ -15,6 +15,7 @@ public class Minesweeper {
   public int col;
   public int rowWritten = 0;
   public int colWritten = 0;
+  public int [][] mineclues;
 
   public Minesweeper(int row, int col) {
     this.row = row;
@@ -43,4 +44,16 @@ public class Minesweeper {
   }
 
 
+  public void computeclue() {
+
+    this .mineclues=new int[row][col];
+
+  }
+
+  public String getclue(int rowIndex) {
+
+    }
+
+
+  }
 }

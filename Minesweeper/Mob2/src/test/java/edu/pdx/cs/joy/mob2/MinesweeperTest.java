@@ -39,6 +39,15 @@ public class MinesweeperTest
 
   }
 
+  @Test
+
+  void testwithnoreturnzeros(){
+    Minesweeper game = new Minesweeper(1,4);
+    game.addLine("....");
+    game.computeclue();
+    assertEquals('0000',game.getclue(0));
+  }
+
 
 
 }
