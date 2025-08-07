@@ -10,19 +10,23 @@ public class MinesweeperTest
 
   @Test
   void canInstantiateKataClass() {
-    new Minesweeper();
+      Minesweeper game = new Minesweeper(0,0);
   }
 
   @Test
-  void addtestlinestorescharactercorrectly(){
+  void addtestlinestorescharactercorrectl(){
     Minesweeper game = new Minesweeper(2,4);
+
     game.addLine("*..*");
 
     assertEquals('*',game.minefield[0][0]);
+    assertEquals('.', game.mineField[0][1]);
+    assertEquals('.', game.mineField[0][2]);
+    assertEquals('*', game.mineField[0][3]);
   }
 
 
 
   }
 
-}
+
