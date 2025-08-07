@@ -18,6 +18,7 @@ public class Minesweeper {
     input = newInput;
     rowCount = 0;
     colCount = 0;
+    parseInputBoard();
   }
 
   public String getInput() {
@@ -32,7 +33,12 @@ public class Minesweeper {
     return colCount;
   }
 
-  // private parseInput
+   private void parseInputBoard(){
+    String[] inputArray =  input.split("\n");
+    String[] firstVals = inputArray[0].split(" ");
+    this.rowCount = Integer.parseInt(firstVals[0]);
+    this.colCount = Integer.parseInt(firstVals[1]);
+   }
 
 
 

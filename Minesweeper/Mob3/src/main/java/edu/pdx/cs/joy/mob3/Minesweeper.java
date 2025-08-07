@@ -17,7 +17,11 @@ public class Minesweeper {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    //System.err.println("Missing command line arguments");
+
+    String m = args[0];
+    String n = args[1];
+
   }
 
   public void showBoard() {
@@ -39,4 +43,9 @@ public class Minesweeper {
     }
 
   }
+
+  public void placeMine() {
+
+  }
+
 }
