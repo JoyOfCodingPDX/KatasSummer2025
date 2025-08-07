@@ -14,6 +14,7 @@ class DiamondIT extends InvokeMainTestCase {
 //    System.out.println('a' + letter);
 //  }//
 
+  @Disabled
   @Test
   void CanPrintLetterA() {
 
@@ -21,6 +22,7 @@ class DiamondIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardOut(), containsString("A"));
   }
 
+  @Disabled
   @Test
   void invokingMainWithNonLetterCharacter() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "-");

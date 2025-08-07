@@ -4,6 +4,7 @@ import com.google.common.annotations.VisibleForTesting;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Stack;
 
 /**
@@ -17,20 +18,71 @@ public class RPNCalculator {
   @VisibleForTesting
   public static void main(String[] args) {
 
+    String userInput = String.join(" ", args);
+      try {
+          System.out.println(calculate(userInput));
+      } catch (Exception e) {
+          System.err.println("Error: " + e.getMessage());
+      }
+
   }
 
 
   public static float calculate(String s) {
+
     String[] parts = s.split(" ");
 
     Stack<Float> numbers = new Stack<>();
 
     for (String part : parts) {
-      //if ()
-        //isDigit()
+      if (isDigit(part)) {
+        numbers.push(Float.parseFloat(part));
+      } else {
+        if (numbers.size() <2 && !part.equals("SQRT") && !part.equals("MAX")) {
+          throw new ArithmeticException("Insufficient operands for operation '" + part + "'");
+        }
+        switch (part) {
+          case  "/":
+            float num1 = numbers.pop();
+            float num2 = numbers.pop();
+            if(num1 == 0) {
+                throw new ArithmeticException("Division by zero is not allowed.");
+            }
+            numbers.push(num2/num1);
+            break;
+          case  "+":
+            num1 = numbers.pop();
+            num2 = numbers.pop();
+            numbers.push(num2 + num1);
+            break;
+          case  "-":
+            num1 = numbers.pop();
+            num2 = numbers.pop();
+            numbers.push(num2 - num1);
+            break;
+          case  "*":
+            num1 = numbers.pop();
+            num2 = numbers.pop();
+            numbers.push(num2 * num1);
+            break;
+          case  "SQRT":
+            num1 = numbers.pop();
+            numbers.push((float) Math.sqrt(num1));
+            break;
+          case  "MAX":
+            ArrayList<Float> list = new ArrayList<>();
+            while(!numbers.isEmpty()) {
+                list.add(numbers.pop());
+            }
+            numbers.push(Collections.max(list));
+            break;
+        }
+      }
     }
-
-    return 0;
+    if(numbers.size() != 1){
+      throw new RuntimeException("Too many digits :(");
+    }
+    return numbers.pop();
   }
 
   public static boolean isDigit(String s) {
@@ -41,4 +93,7 @@ public class RPNCalculator {
       return false;
     }
   }
+
+
+
 }
