@@ -17,7 +17,6 @@ public class Minesweeper {
   public Minesweeper(int row, int col) {
     this.row = row;
     this.col = col;
-    this.minefield = new char[row][col];
   }
 
 
@@ -28,5 +27,14 @@ public class Minesweeper {
   }
 
   public void addLine(String s) {
+    if (minefield == null) {
+      minefield = new char[row][col];
+    }
+    if (s.length() != col) {
+      throw new IllegalArgumentException("Line length does not match column size");
+    }
+    for (int i = 0; i < col; i++) {
+      minefield[0][i] = s.charAt(i);
+    }
   }
 }
