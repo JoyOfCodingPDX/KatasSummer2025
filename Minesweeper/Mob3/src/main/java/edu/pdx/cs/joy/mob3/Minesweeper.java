@@ -53,65 +53,30 @@ public class Minesweeper {
   }
   
   public int getClues(int y, int x) {
-
-    int total = 0;
-
     if (!isValidIndex(y, x)) {
-      return 0;
+        return 0;
     }
-    if(isValidIndex(y, x+1)){
-      if(board[y][x+1] == '*') {
+    int total = 0;
+    int[][] directions = {
+      {0, 1},   // right
+      {-1, 1},  // top-right
+      {-1, 0},  // top
+      {-1, -1}, // top-left
+      {0, -1},  // left
+      {1, -1},  // bottom-left
+      {1, 0},   // bottom
+      {1, 1}    // bottom-right
+    };
+
+    for (int[] direction : directions) {
+      int newY = y + direction[0];
+      int newX = x + direction[1];
+      if (isValidIndex(newY, newX) && board[newY][newX] == '*') {
         total++;
       }
     }
-
-    if(isValidIndex(y-1, x+1)){
-      if(board[y-1][x+1] == '*') {
-        total++;
-      }
-    }
-
-    if(isValidIndex(y-1, x)){
-      if(board[y-1][x] == '*') {
-        total++;
-      }
-    }
-
-    if(isValidIndex(y-1, x-1)){
-      if(board[y-1][x-1] == '*') {
-        total++;
-      }
-    }
-
-    if(isValidIndex(y, x-1)){
-      if(board[y][x-1] == '*') {
-        total++;
-      }
-    }
-
-    if(isValidIndex(y+1, x-1)){
-      if(board[y+1][x-1] == '*') {
-        total++;
-      }
-    }
-
-    if(isValidIndex(y+1, x)){
-      if(board[y+1][x] == '*') {
-        total++;
-      }
-    }
-
-    if(isValidIndex(y+1, x+1)){
-      if(board[y-1][x+1] == '*') {
-        total++;
-      }
-    }
-
-
     System.out.println(total);
     return total;
-
-
   }
 
   public boolean isValidIndex(int y, int x) {

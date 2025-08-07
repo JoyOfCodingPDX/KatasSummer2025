@@ -48,7 +48,7 @@ public class MinesweeperTest
     int n = 4;
     game.createBoard(m, n);
     game.placeMine(2, 3);
-    assertThat(game.getClues(0,0), equalTo(1));
+    assertThat(game.getClues(1,3), equalTo(1));
   }
 
   @Test
