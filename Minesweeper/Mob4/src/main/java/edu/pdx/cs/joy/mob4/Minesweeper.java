@@ -10,6 +10,38 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Minesweeper {
 
+  private String input;
+  private int rowCount;
+  private int colCount;
+
+  public Minesweeper(String newInput) {
+    input = newInput;
+    rowCount = 0;
+    colCount = 0;
+    parseInputBoard();
+  }
+
+  public String getInput() {
+    return input;
+  }
+
+  public int getRowCount() {
+    return rowCount;
+  }
+
+  public int getColCount() {
+    return colCount;
+  }
+
+   private void parseInputBoard(){
+    String[] inputArray =  input.split("\n");
+    String[] firstVals = inputArray[0].split(" ");
+    this.rowCount = Integer.parseInt(firstVals[0]);
+    this.colCount = Integer.parseInt(firstVals[1]);
+   }
+
+
+
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
