@@ -36,4 +36,19 @@ public static char[][] buildGrid(char[][]grid){
   int rows = grid.length;
   int columns = grid[0].length;
   char[][] newGrid = new char[rows][columns];
+  int[] dx = {-1, -1, -1, 0, 0, 1, 1, 1};
+  int[] dy = {-1, 0, 1, -1, 1, -1, 0, 1};
+
+  for(int i = 0; i < rows; i++){
+    for(int j = 0; j < columns; j++){
+      if(grid[i][j] == '*')
+        newGrid[i][j] = '*';
+      else{
+
+      }
+
+    }
+  }
+
+
 }

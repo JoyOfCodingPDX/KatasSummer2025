@@ -41,5 +41,26 @@ public class MinesweeperTest
   }
 
 
+  @Test
+  void TestCluesAtIndex(){
+    Minesweeper game = new Minesweeper();
+    int m = 4;
+    int n = 4;
+    game.createBoard(m, n);
+    game.placeMine(2, 3);
+    assertThat(game.getClues(0,0), equalTo(1));
+  }
+
+  @Test
+  void IsValidTest(){
+    Minesweeper game = new Minesweeper();
+    int m = 4;
+    int n = 4;
+    game.createBoard(m, n);
+
+    assertThat(game.isValidIndex(3, 3), equalTo(true));
+  }
+
+
 
 }

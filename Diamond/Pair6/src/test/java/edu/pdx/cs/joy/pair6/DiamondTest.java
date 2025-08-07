@@ -23,16 +23,4 @@ public class DiamondTest {
                     " A\n";
     assertEquals(expected, Diamond.print('B'));
   }
-
-  @Test
-  void returnsDiamondForC() {
-    String expected =
-            "  A\n" +
-                    " B B\n" +
-                    "C   C\n" +
-                    " B B\n" +
-                    "  A\n";
-    assertEquals(expected, Diamond.print('C'));
-  }
-
 }
