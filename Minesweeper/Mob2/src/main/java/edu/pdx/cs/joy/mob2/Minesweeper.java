@@ -13,6 +13,8 @@ public class Minesweeper {
   public char[][] minefield;
   public int row;
   public int col;
+  public int rowWritten = 0;
+  public int colWritten = 0;
 
   public Minesweeper(int row, int col) {
     this.row = row;
@@ -27,14 +29,18 @@ public class Minesweeper {
   }
 
   public void addLine(String s) {
-    if (minefield == null) {
-      minefield = new char[row][col];
+    if (this.minefield == null) {
+      this.minefield = new char[row][col];
     }
-    if (s.length() != col) {
+    if (s.length() != this.col) {
       throw new IllegalArgumentException("Line length does not match column size");
     }
     for (int i = 0; i < col; i++) {
-      minefield[0][i] = s.charAt(i);
+      this.minefield[this.rowWritten][i] = s.charAt(i);
     }
+    this.rowWritten++;
+
   }
+
+
 }
